@@ -1,0 +1,35 @@
+body,div
+{
+    position:fixed;
+    margin:0;padding:0;
+    height:100%;
+    width:100%;
+}
+/*登录信息*/
+.login
+{
+    float:left;
+    position:relative;
+    font-size:18px;
+    top:0%;
+    height:3%;
+    width:100%;
+}
+/*主界面*/
+.main
+{
+    position:relative;
+    float:left;
+    width:100%;
+    top:1%;
+    height:90%;
+}
+/*端点检测信息*/
+.vad
+{
+    position:relative;
+    float:left;
+    width:100%;
+    top:1%;
+    height:40%;
+}
