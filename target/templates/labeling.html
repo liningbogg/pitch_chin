@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <title>数据：{{title}}</title>
     <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com.cn/highcharts/highcharts.js"></script>
+    <script src="https://code.highcharts.com.cn/highcharts/modules/exporting.js"></script>
+    <script src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
     <script src="/static/js/labeling.js?time='+new Date().getTime()+'"></script>
     <link href="/static/css/labeling.css?time='+new Date().getTime()+'" rel="stylesheet" type="text/css" />
 </head>
@@ -18,9 +20,12 @@
 </div>
 <script>
     //关于端点检测的字典数组
-    var vadCharDict={"spectral_entropy":{{ee|safe}},"rmse":{{rmse|safe}},"stopPos":{{stopPos|safe}},
-    "startPos":{{startPos|safe}},"ee_diff":{{ee_diff|safe}}};
-    addChart("vad",vadCharDict,"vad",256,512)
+    var vadChartDictSeries={"spectral_entropy":{{ee|safe}},"rmse":{{rmse|safe}}}
+    var vadChartDictLine={
+		"stopPos":{{stopPos|safe}},
+        "startPos":{{startPos|safe}}	
+	}
+    addChart("vad",vadChartDictSeries,vadChartDictLine,"vad",256,512)
 </script>
 </body>
 </html>

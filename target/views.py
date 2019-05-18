@@ -554,7 +554,7 @@ class TargetView(View):
         rmse = self.wave_mem_rmse.achieve(user_id, title, fs, nfft, 0, end)
         rmse = list(rmse)
         thrarta = 0.1
-        thrartb = 0.2
+        thrartb = 0.1
         throp = 0.1
         vadrs = targetTools.vad(ee, rmse, thrarta, thrartb, throp)
         context = {'title': title, 'ee': ee, 'rmse': rmse, 'stopPos': list(vadrs['stopPos']),

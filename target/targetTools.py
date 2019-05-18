@@ -58,14 +58,17 @@ class targetTools:
         clipStart = [item for item in info if (item[2] < (-1 * thrarta) and item[3] > thrartb)]
         startPosOri = np.array([x[0]-1 for x in clipStart])
         startPosOri = startPosOri.astype(np.int32)
-
         stopPosOri = np.array([x[0]-1 for x in clipStop])  # 也要存储
         stopPosOri = stopPosOri.astype(np.int32)
-        startPos = np.zeros(len(rmse))
-        stopPos = np.zeros(len(rmse))
-        startPos[startPosOri] = 1
-        stopPos[stopPosOri] = 1
         vadrs = {'info': info, 'clipStart': clipStart,
-                  'clipStop': clipStop, 'startPos': startPos, 'stopPos': stopPos, 'ee_diff': ee_diff}  # 融合后的ee区域，未进行rmse加权。(最后要输出)
+                  'clipStop': clipStop, 'startPos': startPosOri, 'stopPos': stopPosOri, 'ee_diff': ee_diff}  # 融合后的ee区域，未进行rmse加权。(最后要输出)
 
         return vadrs
+
+
+
+
+
+
+
+
