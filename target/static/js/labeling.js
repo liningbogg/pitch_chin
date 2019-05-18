@@ -24,26 +24,32 @@ function addChart(title, dictSeries,dictLine, MyDiv,start, end){
         title: {
             text: title
         },
-	exporting: {
+		exporting: {
             enabled:false
-	},
+		},
         xAxis: {
             categories: index.slice(start,end)
         },
-	yAxis: {
-	    tickInterval: 0.05
-	},
-        legend: {
-	    layout: 'vertical',
-	    align: 'right',
-	    verticalAlign: 'middle',
-	    enabled: true
-	},
-	tooltip: {
+		yAxis: {
+		    tickInterval: 0.05
+		},
+  		legend: {
+	    	layout: 'vertical',
+	    	align: 'right',
+	    	verticalAlign: 'middle',
+	    	enabled: true
+		},
+		tooltip: {
             valueDecimals: 2,  //显示精度
-	    shared: true
-	},
-
+	    	shared: true
+		},
+		plotOptions: {
+			series: {
+				marker: {
+					enabled: false
+				}
+			},
+		},
     };
     options.series = new Array();
     var i=0;

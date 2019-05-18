@@ -37,10 +37,17 @@ function addChart(title, data, MyDiv,start, end){
         legend: {
 			enabled: false
 		},
-	tooltip: {
-		crosshairs: true,
-		shared: true
-	},
+		tooltip: {
+			crosshairs: true,
+			shared: true
+		},
+		plotOptions: {
+			series: {
+				marker: {
+					enabled: false
+				}
+			},
+		}, 
         series: []
     };
     options.series = new Array();

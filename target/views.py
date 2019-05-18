@@ -480,7 +480,7 @@ class TargetView(View):
 				candidateFrame = clips.aggregate(Max('startingPos'))['startingPos__max']
 				candidateFrameNum = wave.frameNum  # 待测总帧数
 				completion = round(candidateFrame / candidateFrameNum * 100, 1)
-
+				completion = min(100,completion)
 			wave.completion = completion
 			wave.save()
 		waves = Wave.objects.filter(create_user_id=request.user).order_by('frameNum')
@@ -574,6 +574,7 @@ class TargetView(View):
 			else:
 				candidateFrame = clips.aggregate(Max('startingPos'))['startingPos__max']
 				current_frame = candidateFrame+1
+				current_frame = min(wave.frameNum-1,current_frame)
 		else:
 			# 指定位置
 			labelinfo.manual_pos=-1	# 指定位置只生效一次
@@ -601,7 +602,7 @@ class TargetView(View):
 		title = request.GET.get('title')
 		create_user=str(request.user)
 		wave = Wave.objects.get(create_user_id=create_user, title=title)
-		clips = Clip.objects.filter(title=title, create_user_id=request.user).order_by('startingPos')
+		clips = Clip.objects.filter(title=title, create_user_id=request.user, startingPos__lt=wave.frameNum).order_by('startingPos')
 		marked_phrases = MarkedPhrase.objects.filter(create_user_id=create_user, title=title)
 		tones = Tone.objects.filter(create_user_id=create_user, title=title).order_by('pos')
 		items = []	# 返回的clips
