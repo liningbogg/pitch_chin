@@ -59,7 +59,6 @@ function addChart(title, dictSeries,dictLine, MyDiv,start, end){
 	i=0;
 	for(key in dictLine){
 		for(index in dictLine[key]){
-			console.log(dictLine[key][index]);
 			 chart.xAxis[0].addPlotLine({           //在x轴上增加
 			    value:dictLine[key][index]-start,                           //在值为2的地方
 				width:1, //标示线的宽度为2px

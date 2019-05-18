@@ -20,12 +20,19 @@
 </div>
 <script>
     //关于端点检测的字典数组
-    var vadChartDictSeries={"spectral_entropy":{{ee|safe}},"rmse":{{rmse|safe}}}
+    var vadChartDictSeries={"spectral_entropy":{{ee|safe}},"rmse":{{rmse|safe}}};
     var vadChartDictLine={
 		"stopPos":{{stopPos|safe}},
         "startPos":{{startPos|safe}}	
-	}
-    addChart("vad",vadChartDictSeries,vadChartDictLine,"vad",256,512)
+	};
+	var current_frame = {{current_frame|safe}};
+	var extend_rad = {{extend_rad|safe}};
+	var start_pos = Math.max(0,current_frame-extend_rad);
+	var frame_end = {{frame_num|safe}}-1;
+	start_pos = Math.min(start_pos,frame_end);
+	var end_pos = Math.max(0,current_frame+extend_rad);
+	end_pos = Math.min(end_pos,frame_end);
+    addChart("vad",vadChartDictSeries,vadChartDictLine,"vad",start_pos,end_pos);
 </script>
 </body>
 </html>
