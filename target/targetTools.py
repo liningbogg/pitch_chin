@@ -64,11 +64,3 @@ class targetTools:
                   'clipStop': clipStop, 'startPos': startPosOri, 'stopPos': stopPosOri, 'ee_diff': ee_diff}  # 融合后的ee区域，未进行rmse加权。(最后要输出)
 
         return vadrs
-
-
-
-
-
-
-
-
