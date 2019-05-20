@@ -127,9 +127,8 @@ USE_TZ = False
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-LOGIN_URL = '../login'
 STATICFILES_DIRS = [
-    '/home/liningbo/文档/waveFiles/',
     '../static/',
+	'/home/liningbo/文档/waveFiles/'
 ]
 AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend',)
