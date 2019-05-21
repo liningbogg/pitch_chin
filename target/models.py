@@ -35,15 +35,18 @@ class Clip(BaseModel):
 
 
 class Labeling(BaseModel):
-    title = models.CharField(max_length=255)
-    frameNum = models.IntegerField(default=0)
-    nfft = models.IntegerField(default=4410)
-    current_frame = models.IntegerField(default=0)  # 当前帧的计算，在labeling启动时候调用
-    manual_pos = models.IntegerField(default=-1)  # 如果小于0，认为是自动位置，否则是指定位置，此时不计算current，此轮结束改回-1.
-    extend_rad = models.IntegerField(default=60)  # 延展半径
-    tone_extend_rad = models.IntegerField(default=60)  # 音调延展半径
-    class Meta:
-        unique_together = ["title", "create_user_id", "nfft"]
+	title = models.CharField(max_length=255)
+	frameNum = models.IntegerField(default=0)
+	nfft = models.IntegerField(default=4410)
+	current_frame = models.IntegerField(default=0)  # 当前帧的计算，在labeling启动时候调用
+	manual_pos = models.IntegerField(default=-1)  # 如果小于0，认为是自动位置，否则是指定位置，此时不计算current，此轮结束改回-1.
+	extend_rad = models.IntegerField(default=60)  # 延展半径
+	tone_extend_rad = models.IntegerField(default=60)  # 音调延展半径
+	vad_thrart_EE = models.FloatField(default=0.1)
+	vad_thrart_RMSE = models.FloatField(default=0.1)
+	vad_throp_EE = models.FloatField(default=0.1)
+	class Meta:
+		unique_together = ["title", "create_user_id", "nfft"]
 
 class Tone(BaseModel):
     """

@@ -554,16 +554,16 @@ class TargetView(View):
 		ee = list(ee)
 		rmse = self.wave_mem_rmse.achieve(user_id, title, fs, nfft, 0, end)
 		rmse = list(rmse)
-		thrarta = 0.1
-		thrartb = 0.1
-		throp = 0.1
-		vadrs = targetTools.vad(ee, rmse, thrarta, thrartb, throp) 
 		try:
 			labelinfo = Labeling.objects.get(create_user_id=user_id, title=title)
 		except Exception as e:
 			print("labelinfo no existed, a new labelinfo will be created.")
 			Labeling(title=title,create_user_id=user_id,nfft=nfft,frameNum=wave.frameNum).save()
 			labelinfo = Labeling.objects.get(create_user_id=user_id, title=title)
+		thrartEE = labelinfo.vad_thrart_EE
+		thrartRmse = labelinfo.vad_thrart_RMSE
+		throp = labelinfo.vad_throp_EE
+		vadrs = targetTools.vad(ee, rmse, thrartEE, thrartRmse, throp) 
 		extend_rad = labelinfo.extend_rad
 		manual_pos= labelinfo.manual_pos
 		if manual_pos<0:

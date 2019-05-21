@@ -19,7 +19,7 @@ class targetTools:
     """
 
     @staticmethod
-    def vad(ee, rmse, thrarta, thrartb, throp):
+    def vad(ee, rmse, thrartEE, thrartRmse, throp):
         eearray = np.array(ee)
         ee_diff = np.diff(ee)
         ee_diff = np.insert(ee_diff, 0, 0, None)
@@ -55,7 +55,7 @@ class targetTools:
             maxRmse = 0
         info.append([currentInit, length, currentSum, maxRmse, maxEEPos])
         clipStop = [item for item in info if (item[2] > throp)]
-        clipStart = [item for item in info if (item[2] < (-1 * thrarta) and item[3] > thrartb)]
+        clipStart = [item for item in info if (item[2] < (-1 * thrartEE) and item[3] > thrartRmse)]
         startPosOri = np.array([x[0]-1 for x in clipStart])
         startPosOri = startPosOri.astype(np.int32)
         stopPosOri = np.array([x[0]-1 for x in clipStop])  # 也要存储
