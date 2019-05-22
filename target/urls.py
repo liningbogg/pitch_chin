@@ -33,6 +33,7 @@ urlpatterns = [
     path('wave/access/', target_view.db_access),
     path('labeling/', target_view.labeling),
     path('login/', target_view.login),
+    path('accounts/login/', target_view.login),
     path('logout/', target_view.logout),
     path('register/', target_view.register),
     path('wave/get_clipFFT/', target_view.get_clipfft),
