@@ -44,7 +44,7 @@
     <div class="pitches" id="pitches" style="border-width:1px; border-style:solid; border-color:green;">
     </div>
     <script>
-         pitchesArray = {{pitches|safe}};
+         var pitchesArray = {{pitches|safe}};
          new AddWavePitchesChart('{{wave.title|safe}}', pitchesArray, "pitches")//添加pitches chart
     </script>
     <div class="primary_frame">

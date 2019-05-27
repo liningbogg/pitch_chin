@@ -33,3 +33,14 @@ body,div
     top:1%;
     height:25%;
 }
+/*参数信息*/
+.info
+{
+	
+    position:relative;
+    float:right;
+	right:1%;
+    width:25%;
+    top:1%;
+    height:50%;
+}

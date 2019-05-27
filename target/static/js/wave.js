@@ -64,7 +64,7 @@ function addChart(title, data, MyDiv,start, end){
         options.series[0]=new Object();
         options.series[0].color = color_chart[0];
         options.series[0].lineWidth = 1;
-        options.series[0].name = MyDiv+i;
+        options.series[0].name = MyDiv;
         options.series[0].data = data
     }
         // 生成chart
