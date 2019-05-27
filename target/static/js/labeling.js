@@ -11,7 +11,7 @@ $.ajaxSetup({
     });
 
 //添加曲线的高层封装,data字典中包含lengend 以及数据
-function addChart(title, dictSeries,dictLine, MyDiv,start, end){
+function addChart(title, dictSeries, dictLine, currentPos, MyDiv,start, end){
     //曲线参数设置
     var  options = {
         chart: {
@@ -73,6 +73,11 @@ function addChart(title, dictSeries,dictLine, MyDiv,start, end){
 		}
 		i++;
 	}
+	chart.xAxis[0].addPlotLine({           //在x轴上增加
+		value:currentPos-start,                           //在值为2的地方
+		width:2, //标示线的宽度为2px
+    	color: "green"//标示线的颜色
+	});
 
 }
 

@@ -33,6 +33,15 @@ body,div
     top:1%;
     height:25%;
 }
+/*主要信息*/
+.primary
+{
+    position:relative;
+    float:left;
+    width:100%;
+    top:1%;
+    height:48%;
+}
 /*参数信息*/
 .info
 {
@@ -41,6 +50,8 @@ body,div
     float:right;
 	right:1%;
     width:25%;
-    top:1%;
-    height:50%;
+    top:0%;
+    height:100%;
+	overflow-y:auto;
+	overflow-x:auto;
 }

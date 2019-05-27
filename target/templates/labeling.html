@@ -18,8 +18,83 @@
 <div  class="vad" id="vad" style="border-width:1px; color:blue">
 
 </div>
-<div  class="info" id="info" style="border-width:1px; border-style:solid; border-color:green;">
-
+<div class="primary" id="primary" style="border-width:1px; border-style:solid; border-color:red;">
+	<div  class="info" id="info" style="border-width:1px; border-style:solid; border-color:green;">
+		<table border="1" width=95%>
+			<thead>
+				<tr>
+					<th>属性</th>
+					<th>数值</th>
+				</tr>
+			</thead>
+			<tr>
+				<td style="font-size:24px;line-height:1">title</td>
+				<td style="font-size:24px;line-height:1">
+					<input type="txt" name="title" readonly="true" value={{title|safe}}>
+				</td>
+			</tr>
+			<tr>
+				<td style="font-size:24px;line-height:1">frameNum</td>
+				<td style="font-size:24px;line-height:1">
+					<input type="num" name="frame_num" readonly="true" value={{frame_num|safe}}>
+				</td>
+			</tr>
+			<tr>
+				<td style="font-size:24px;line-height:1;color:green">current_frame</td>
+				<td style="font-size:24px;line-height:1">
+					<input type="num" name="current_frame" readonly="true" value={{current_frame|safe}} style="color:green">
+				</td>
+			</tr>
+			<tr>
+				<td style="font-size:24px;line-height:1">manual_pos</td>
+				<td style="font-size:24px;line-height:1">
+					<input type="num" name="manual_pos" readonly="true" value={{manual_pos|safe}}>
+				</td>
+			</tr>
+			<tr>
+				<td style="font-size:24px;line-height:1">nfft</td>
+				<td style="font-size:24px;line-height:1">
+					<input type="num" name="nfft" readonly="true" value={{nfft|safe}}>
+				</td>
+			</tr>
+			<tr>
+				<td style="font-size:24px;line-height:1">extend_rad</td>
+				<td style="font-size:24px;line-height:1">
+					<input type="num" name="extend_rad" value={{extend_rad|safe}}>
+				</td>
+			</tr>
+			<tr>
+				<td style="font-size:24px;line-height:1">tone_extend_rad</td>
+				<td style="font-size:24px;line-height:1">
+					<input type="num" name="tone_extend_rad" value={{tone_extend_rad|safe}}>
+				</td>
+			</tr>
+			<tr>
+				<td style="font-size:24px;line-height:1">vad_thrart_EE</td>
+				<td style="font-size:24px;line-height:1">
+					<input type="num" name="vad_thrart_EE" value={{vad_thrart_EE|safe}}>
+				</td>
+			</tr>
+			<tr>
+				<td style="font-size:24px;line-height:1">vad_throp_EE</td>
+				<td style="font-size:24px;line-height:1">
+					<input type="num" name="vad_throp_EE" value={{vad_throp_EE|safe}}>
+				</td>
+			</tr>
+			<tr>
+				<td style="font-size:24px;line-height:1">vad_thrart_RMSE</td>
+				<td style="font-size:24px;line-height:1">
+					<input type="num" name="vad_thrart_RMSE" value={{vad_thrart_RMSE|safe}}>
+				</td>
+			</tr>
+			<tr>
+				<td style="font-size:24px;line-height:1">create_user_id</td>
+				<td style="font-size:24px;line-height:1">
+					<input type="txt" readonly="true" name="create_user_id" value={{create_user_id|safe}}>
+				</td>
+			</tr>
+		</table>
+	</div>
 </div>
 <script>
     //关于端点检测的字典数组
@@ -35,7 +110,7 @@
 	start_pos = Math.min(start_pos,frame_end);
 	var end_pos = Math.max(0,current_frame+extend_rad);
 	end_pos = Math.min(end_pos,frame_end);
-    addChart("vad",vadChartDictSeries,vadChartDictLine,"vad",start_pos,end_pos);
+    addChart("vad",vadChartDictSeries,vadChartDictLine, current_frame,"vad",start_pos,end_pos);
 </script>
 </body>
 </html>

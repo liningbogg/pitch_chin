@@ -565,6 +565,7 @@ class TargetView(View):
 		throp = labelinfo.vad_throp_EE
 		vadrs = targetTools.vad(ee, rmse, thrartEE, thrartRmse, throp) 
 		extend_rad = labelinfo.extend_rad
+		tone_extend_rad = labelinfo.tone_extend_rad
 		manual_pos= labelinfo.manual_pos
 		if manual_pos<0:
 			# 计算位置
@@ -582,8 +583,8 @@ class TargetView(View):
 			pass			
 		labelinfo.current_frame=current_frame
 		labelinfo.save()
-		context = {'title': title, 'ee': ee, 'rmse': rmse, 'stopPos': list(vadrs['stopPos']),
-				   'startPos': list(vadrs['startPos']),'ee_diff':list(vadrs['ee_diff']), "current_frame":current_frame,"extend_rad":extend_rad, "frame_num":end}
+		context = {'title': title,'nfft': nfft, 'ee': ee, 'rmse': rmse, 'stopPos': list(vadrs['stopPos']),'manual_pos':manual_pos, 
+				   'startPos': list(vadrs['startPos']),'ee_diff':list(vadrs['ee_diff']), "current_frame":current_frame,"extend_rad":extend_rad,"tone_extend_rad":tone_extend_rad, "frame_num":end, 'vad_thrart_EE':thrartEE, 'vad_thrart_RMSE':thrartRmse, 'vad_throp_EE':throp, 'create_user_id':user_id}
 		return render(request, 'labeling.html', context)
 
 	@classmethod
