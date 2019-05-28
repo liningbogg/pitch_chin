@@ -686,8 +686,8 @@ class TargetView(View):
 		fs = int(request.GET.get('fs'))
 		fileName = request.GET.get('fileName')
 
-		self.wave_mem.add_mem(title)  # 试图将完整曲目加入缓存
-		wave_arr = self.wave_mem_wave.achieve_Wave(user_id, title, nfft, start, end)  # 获取音频信号
+		#self.wave_mem.add_mem(title)  # 试图将完整曲目加入缓存
+		wave_arr = self.wave_mem_wave.achieve(user_id, title, fs, nfft, start, end)  # 获取音频信号
 		wave_arr = np.array(wave_arr) * 32767
 		wave_arr = wave_arr.astype(np.int16)
 		io_stream = BytesIO()  # 内存文件

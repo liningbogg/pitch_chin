@@ -31,7 +31,7 @@ body,div
     float:left;
     width:100%;
     top:1%;
-    height:25%;
+    height:20%;
 }
 /*主要信息*/
 .primary
@@ -40,12 +40,11 @@ body,div
     float:left;
     width:100%;
     top:1%;
-    height:48%;
+    height:55%;
 }
 /*参数信息*/
 .info
 {
-	
     position:relative;
     float:right;
 	right:1%;
@@ -54,4 +53,13 @@ body,div
     height:100%;
 	overflow-y:auto;
 	overflow-x:auto;
+}
+.local_pitch
+{
+    position:relative;
+    float:left;
+	left:1%;
+    width:72%;
+    top:0%;
+    height:25%;
 }
