@@ -583,8 +583,25 @@ class TargetView(View):
 			pass			
 		labelinfo.current_frame=current_frame
 		labelinfo.save()
-		context = {'title': title,'nfft': nfft, 'ee': ee, 'rmse': rmse, 'stopPos': list(vadrs['stopPos']),'manual_pos':manual_pos, 
-				   'startPos': list(vadrs['startPos']),'ee_diff':list(vadrs['ee_diff']), "current_frame":current_frame,"extend_rad":extend_rad,"tone_extend_rad":tone_extend_rad, "frame_num":end, 'vad_thrart_EE':thrartEE, 'vad_thrart_RMSE':thrartRmse, 'vad_throp_EE':throp, 'create_user_id':user_id}
+		combRef=np.zeros(wave.frameNum)
+		combDescanRef=[np.zeros(wave.frameNum)]*2
+		try:
+			clips = Clip.objects.filter(title=title, create_user_id="combDescan", startingPos__lt=wave.frameNum).order_by('startingPos')
+			for clip in clips:
+				pos=clip.startingPos
+				tar=pickle.loads(clip.tar)
+				index=0;
+				for pitch in tar:
+					combDescanRef[index][pos]=pitch
+					index=index+1
+			clips = Clip.objects.filter(title=title, create_user_id="comb", startingPos__lt=wave.frameNum).order_by('startingPos')
+			for clip in clips:
+				pos=clip.startingPos
+				tar=pickle.loads(clip.tar)
+				combRef[pos]=tar[0]				
+		except Exception as e:
+			print(e)
+		context = {'title': title,'nfft': nfft, 'ee': ee, 'rmse': rmse, 'stopPos': list(vadrs['stopPos']),'manual_pos':manual_pos,'combDescanPrimary':list(combDescanRef[0]),'combDescanSecondary':list(combDescanRef[1]),'comb':list(combRef),'startPos': list(vadrs['startPos']),'ee_diff':list(vadrs['ee_diff']), "current_frame":current_frame,"extend_rad":extend_rad,"tone_extend_rad":tone_extend_rad, "frame_num":end, 'vad_thrart_EE':thrartEE, 'vad_thrart_RMSE':thrartRmse, 'vad_throp_EE':throp, 'create_user_id':user_id}
 		return render(request, 'labeling.html', context)
 
 	@classmethod

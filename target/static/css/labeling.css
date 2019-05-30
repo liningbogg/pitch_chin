@@ -46,20 +46,85 @@ body,div
 .info
 {
     position:relative;
-    float:right;
+	float:right;
 	right:1%;
     width:25%;
     top:0%;
     height:100%;
 	overflow-y:auto;
-	overflow-x:auto;
 }
+.table_info
+{
+	width:98%;
+	table-layout:fixed;
+}
+.table_info tr td{
+	font-size:24px;
+	line-height:1;
+}
+.table_info tr td input{
+	width:98%;
+	table-layout:fixed;
+	font-size:24px;
+	line-height:1;
+}
+/*局部音高参考*/
 .local_pitch
+{
+    position:relative;
+	float:left;
+	left:1%;
+    width:72%;
+    top:0%;
+    height:24%;
+}
+/*局部音高标记*/
+.local_target
+{
+    position:relative;
+	float:left;
+	left:1%;
+    width:72%;
+    top:1%;
+    height:24%;
+}
+/*fft及其中间结果*/
+.sampling_data
 {
     position:relative;
     float:left;
 	left:1%;
     width:72%;
-    top:0%;
-    height:25%;
+    top:2%;
+    height:48%;
+}
+/*fft*/
+.sampling_fft
+{
+    position:relative;
+    float:left;
+	left:0.5%;
+    width:49%;
+    top:1%;
+    height:98%;
+}
+/*中间结果*/
+.sampling_medium
+{
+    position:relative;
+    float:left;
+	left:1.5%;
+    width:49%;
+    top:1%;
+    height:98%;
+}
+/*标记参考，包括历史信息和当前帧指法推测*/
+.ref
+{
+    position:relative;
+    float:left;
+	left:0%;
+    width:99.5%;
+    top:1%;
+    height:19%;
 }

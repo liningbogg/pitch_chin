@@ -20,84 +20,98 @@
 </div>
 <div class="primary" id="primary" style="border-width:1px; border-style:solid; border-color:red;">
 	<div  class="info" id="info" style="border-width:1px; border-style:solid; border-color:green;">
-		<table border="1" width=95%>
+		<table border="" class="table_info" name="table_info" >
 			<thead>
 				<tr>
-					<th>属性</th>
-					<th>数值</th>
+					<th >属性</th>
+					<th >数值</th>
 				</tr>
 			</thead>
 			<tr>
-				<td style="font-size:24px;line-height:1">title</td>
-				<td style="font-size:24px;line-height:1">
-					<input type="txt" name="title" readonly="true" value={{title|safe}}>
+				<td>title</td>
+				<td>
+					<input type="text" name="title" readonly="true" value={{title|safe}} />
 				</td>
 			</tr>
 			<tr>
-				<td style="font-size:24px;line-height:1">frameNum</td>
-				<td style="font-size:24px;line-height:1">
-					<input type="num" name="frame_num" readonly="true" value={{frame_num|safe}}>
+				<td>frameNum</td>
+				<td>
+					<input type="text"name="frame_num" readonly="true" value={{frame_num|safe}} />
 				</td>
 			</tr>
 			<tr>
 				<td style="font-size:24px;line-height:1;color:green">current_frame</td>
-				<td style="font-size:24px;line-height:1">
-					<input type="num" name="current_frame" readonly="true" value={{current_frame|safe}} style="color:green">
+				<td>
+					<input type="text" name="current_frame" readonly="true" value={{current_frame|safe}} style="color:green" />
 				</td>
 			</tr>
 			<tr>
-				<td style="font-size:24px;line-height:1">manual_pos</td>
-				<td style="font-size:24px;line-height:1">
-					<input type="num" name="manual_pos" readonly="true" value={{manual_pos|safe}}>
+				<td>manual_pos</td>
+				<td>
+					<input type="number" name="manual_pos"  value={{manual_pos|safe}} placeholder="指定下次标记的位置，否则置为负数"/>
 				</td>
 			</tr>
 			<tr>
-				<td style="font-size:24px;line-height:1">nfft</td>
-				<td style="font-size:24px;line-height:1">
-					<input type="num" name="nfft" readonly="true" value={{nfft|safe}}>
+				<td>nfft</td>
+				<td>
+					<input type="text"name="nfft" readonly="true" value={{nfft|safe}} />
 				</td>
 			</tr>
 			<tr>
-				<td style="font-size:24px;line-height:1">extend_rad</td>
-				<td style="font-size:24px;line-height:1">
-					<input type="num" name="extend_rad" value={{extend_rad|safe}}>
+				<td>extend_rad</td>
+				<td>
+					<input type="number" name="extend_rad" value={{extend_rad|safe}} placeholder="当前标记视窗半径"/>
 				</td>
 			</tr>
 			<tr>
-				<td style="font-size:24px;line-height:1">tone_extend_rad</td>
-				<td style="font-size:24px;line-height:1">
-					<input type="num" name="tone_extend_rad" value={{tone_extend_rad|safe}}>
+				<td>tone_extend_rad</td>
+				<td>
+					<input type="number" name="tone_extend_rad" value={{tone_extend_rad|safe}} placeholder="音符参考半径"/>
 				</td>
 			</tr>
 			<tr>
-				<td style="font-size:24px;line-height:1">vad_thrart_EE</td>
-				<td style="font-size:24px;line-height:1">
-					<input type="num" name="vad_thrart_EE" value={{vad_thrart_EE|safe}}>
+				<td>vad_thrart_EE</td>
+				<td>
+					<input type="number" name="vad_thrart_EE" value={{vad_thrart_EE|safe}} placeholder="起始位置判定熵阈值"/>
 				</td>
 			</tr>
 			<tr>
-				<td style="font-size:24px;line-height:1">vad_throp_EE</td>
-				<td style="font-size:24px;line-height:1">
-					<input type="num" name="vad_throp_EE" value={{vad_throp_EE|safe}}>
+				<td>vad_throp_EE</td>
+				<td>
+					<input type="number" name="vad_throp_EE" value={{vad_throp_EE|safe}} placeholder="终止位置判定熵阈值"/>
 				</td>
 			</tr>
 			<tr>
-				<td style="font-size:24px;line-height:1">vad_thrart_RMSE</td>
-				<td style="font-size:24px;line-height:1">
-					<input type="num" name="vad_thrart_RMSE" value={{vad_thrart_RMSE|safe}}>
+				<td>vad_thrart_RMSE</td>
+				<td>
+					<input type="number" name="vad_thrart_RMSE" value={{vad_thrart_RMSE|safe}} placeholder="起始位置判定能量阈值"/>
 				</td>
 			</tr>
 			<tr>
-				<td style="font-size:24px;line-height:1">create_user_id</td>
-				<td style="font-size:24px;line-height:1">
-					<input type="txt" readonly="true" name="create_user_id" value={{create_user_id|safe}}>
+				<td>create_user_id</td>
+				<td>
+					<input type="text"readonly="true" name="create_user_id" value={{create_user_id|safe}} />
 				</td>
 			</tr>
 		</table>
 	</div>
 	<div class="local_pitch" id="local_pitch" style="border-width:1px; border-style:solid; border-color:blue;">
 		
-	<div>
+	</div>
+	<div class="local_target" id="local_target" style="border-width:1px; border-style:solid; border-color:red;">
+		
+	</div>
+	<div class="sampling_data" id="sampling_data" style="border-width:1px; border-style:solid; border-color:purple;">
+		<div class="sampling_fft" id="sampling_data" style="border-width:1px; border-style:solid; border-color:green;">
+
+		</div>
+		<div class="sampling_medium" id="sampling_medium" style="border-width:1px; border-style:solid; border-color:green;">
+
+		</div>
+	</div>
+</div>
+<div class="ref" id="ref" style="border-width:1px; border-style:solid; border-color:red;">
+
 </div>
 <script>
     //关于端点检测的字典数组
@@ -113,7 +127,24 @@
 	start_pos = Math.min(start_pos,frame_end);
 	var end_pos = Math.max(0,current_frame+extend_rad);
 	end_pos = Math.min(end_pos,frame_end);
-    addChart("vad",vadChartDictSeries,vadChartDictLine, current_frame,"vad",start_pos,end_pos);
+    addChart("",vadChartDictSeries,vadChartDictLine, current_frame,"vad",start_pos,end_pos);
+</script>
+<script>
+	//comb及combDescan用户提供的参考标记
+	var refChartDictSeries={"combDescan1":{{combDescanPrimary|safe}},"combdeScan2":{{combDescanSecondary|safe}},"comb":{{comb|safe}}};
+    var refChartDictLine={
+		"stopPos":{{stopPos|safe}},
+        "startPos":{{startPos|safe}}	
+	};
+	var current_frame = {{current_frame|safe}};
+	var extend_rad = {{extend_rad|safe}};
+	var start_pos = Math.max(0,current_frame-extend_rad);
+	var frame_end = {{frame_num|safe}};
+	start_pos = Math.min(start_pos,frame_end);
+	var end_pos = Math.max(0,current_frame+extend_rad);
+	end_pos = Math.min(end_pos,frame_end);
+    addChart("",refChartDictSeries,refChartDictLine, current_frame,"local_pitch",start_pos,end_pos);
+
 </script>
 </body>
 </html>

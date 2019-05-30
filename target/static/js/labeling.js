@@ -64,9 +64,9 @@ function addChart(title, dictSeries, dictLine, currentPos, MyDiv,start, end){
     var chart = Highcharts.chart(MyDiv,options);
 	i=0;
 	for(key in dictLine){
-		for(index in dictLine[key]){
+		for(i in dictLine[key]){
 			 chart.xAxis[0].addPlotLine({           //在x轴上增加
-			    value:dictLine[key][index]-start,                           //在值为2的地方
+			    value:dictLine[key][i]-start,                           //在值为2的地方
 				width:1, //标示线的宽度为2px
     			color: color_chart[i]//标示线的颜色
 			});
