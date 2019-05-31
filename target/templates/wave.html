@@ -141,7 +141,11 @@
 <script>
     //添加曲目播放器
     add_wave("{{wave.waveFile}}");
-
+    var clip_select = document.getElementsByName("clip_select");
+    var radioLength = clip_select.length;
+    if(radioLength>0){
+        clip_select[radioLength-1].click();
+    }
     // 总是滚动到最低端
     function top_set(divName){
         var clipDiv = document.getElementById(divName);
