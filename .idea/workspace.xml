@@ -8,9 +8,15 @@
     <bookmark url="file://$PROJECT_DIR$/target/views.py" />
     <bookmark url="file://$PROJECT_DIR$/target/views.py" line="87" />
     <bookmark url="file://$PROJECT_DIR$/target/targetTools.py" line="15" />
+    <bookmark url="file://$PROJECT_DIR$/baseFrqComb.py" line="275" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8acc8f02-be45-420d-812a-1c53fb213d8d" name="Default Changelist" comment="" />
+    <list default="true" id="8acc8f02-be45-420d-812a-1c53fb213d8d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/baseFrqComb.py" beforeDir="false" afterPath="$PROJECT_DIR$/baseFrqComb.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/templates/labeling.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/templates/labeling.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/target/views.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/target/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="559" column="72" selection-start-line="559" selection-start-column="72" selection-end-line="559" selection-end-column="72" />
+            <state relative-caret-position="598">
+              <caret line="568" column="51" selection-start-line="568" selection-start-column="51" selection-end-line="568" selection-end-column="51" />
               <folding>
                 <element signature="e#17#28#0" expanded="true" />
               </folding>
@@ -34,13 +40,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/target/targetTools.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/baseFrqComb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="57" column="80" selection-start-line="57" selection-start-column="76" selection-end-line="57" selection-end-column="80" />
+            <state relative-caret-position="342">
+              <caret line="186" selection-start-line="186" selection-end-line="186" />
               <folding>
-                <element signature="e#0#16#0" expanded="true" />
+                <element signature="e#0#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -49,7 +55,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pitchTarget.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8685">
+            <state relative-caret-position="834">
               <caret line="599" column="91" selection-start-line="599" selection-start-column="91" selection-end-line="599" selection-end-column="91" />
               <folding>
                 <element signature="e#65#102#0" expanded="true" />
@@ -59,7 +65,7 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-98414044/builtins.py">
+        <entry file="file://$PROJECT_DIR$/../.PyCharmCE2018.3/system/python_stubs/-98414044/builtins.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="55470">
               <caret line="3698" column="8" selection-start-line="3698" selection-start-column="8" selection-end-line="3698" selection-end-column="8" />
@@ -70,7 +76,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/target/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1035">
+            <state relative-caret-position="675">
               <caret line="45" column="47" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
             </state>
           </provider>
@@ -79,7 +85,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/target/templates/wave.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2130">
+            <state relative-caret-position="834">
               <caret line="142" column="12" selection-start-line="142" selection-start-column="12" selection-end-line="142" selection-end-column="12" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -102,8 +108,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/target/static/js/labeling.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="57" column="48" lean-forward="true" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
+            <state relative-caret-position="322">
+              <caret line="59" column="37" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -120,8 +126,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/target/templates/labeling.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+            <state relative-caret-position="579">
+              <caret line="172" column="8" lean-forward="true" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -204,7 +210,6 @@
         <option value="$PROJECT_DIR$/target/pitchTrain.py" />
         <option value="$PROJECT_DIR$/target/pitchPrediction.py" />
         <option value="$PROJECT_DIR$/target/dist.py" />
-        <option value="$PROJECT_DIR$/baseFrqComb.py" />
         <option value="$PROJECT_DIR$/pitctPrep.py" />
         <option value="$PROJECT_DIR$/target/static/css/copywaves.css" />
         <option value="$PROJECT_DIR$/target/static/css/wave.css" />
@@ -223,11 +228,12 @@
         <option value="$PROJECT_DIR$/pitchTarget.py" />
         <option value="$PROJECT_DIR$/target/static/js/wave.js" />
         <option value="$PROJECT_DIR$/target/static/css/labeling.css" />
-        <option value="$PROJECT_DIR$/target/templates/labeling.html" />
         <option value="$PROJECT_DIR$/target/models.py" />
-        <option value="$PROJECT_DIR$/target/static/js/labeling.js" />
         <option value="$PROJECT_DIR$/target/targetTools.py" />
         <option value="$PROJECT_DIR$/target/views.py" />
+        <option value="$PROJECT_DIR$/target/templates/labeling.html" />
+        <option value="$PROJECT_DIR$/target/static/js/labeling.js" />
+        <option value="$PROJECT_DIR$/baseFrqComb.py" />
       </list>
     </option>
   </component>
@@ -247,44 +253,26 @@
         <subPane>
           <expand>
             <path>
-              <item name="pitch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pitch" type="462c0819:PsiDirectoryNode" />
+              <item name="pitch_chin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pitch_chin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="pitch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pitch" type="462c0819:PsiDirectoryNode" />
-              <item name="pitch" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pitch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pitch" type="462c0819:PsiDirectoryNode" />
+              <item name="pitch_chin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pitch_chin" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="pitch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pitch" type="462c0819:PsiDirectoryNode" />
+              <item name="pitch_chin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pitch_chin" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="pitch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pitch" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pitch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pitch" type="462c0819:PsiDirectoryNode" />
+              <item name="pitch_chin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pitch_chin" type="462c0819:PsiDirectoryNode" />
               <item name="target" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pitch" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pitch" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -316,7 +304,7 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Python" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -336,7 +324,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.pitctPrep">
+  <component name="RunManager" selected="Python.baseFrqComb">
+    <configuration name="baseFrqComb" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="音高分析输出标定" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/baseFrqComb.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="datasetAchieve" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="音高分析输出标定" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -421,39 +430,18 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="音高分析输出标定" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/target" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/target/views.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.baseFrqComb" />
         <item itemvalue="Python.pitctPrep" />
         <item itemvalue="Python.pitchTarget" />
         <item itemvalue="Python.dist" />
         <item itemvalue="Python.datasetAchieve" />
-        <item itemvalue="Python.views" />
       </list>
     </recent_temporary>
   </component>
   <component name="SvnConfiguration">
-    <configuration>$USER_HOME$/.subversion</configuration>
+    <configuration>$PROJECT_DIR$/../.subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -519,6 +507,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6282642" visible="true" weight="0.15746309" />
       <window_info id="Structure" order="1" sideWeight="0.37173578" side_tool="true" weight="0.1213778" />
@@ -526,10 +515,10 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.36402568" />
       <window_info anchor="bottom" x="78" y="439" width="1829" height="197" id="Run" order="2" sideWeight="0.4980864" weight="1.0" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993576" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39847162" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4969929" visible="true" weight="0.33842796" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.4969929" weight="0.33769062" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49894515" weight="0.32873806" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.4994726" weight="0.32767764" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5030071" side_tool="true" weight="0.33842796" />
@@ -641,14 +630,14 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/target/pitchTrain.py" />
-    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/numpy/core/arrayprint.py" />
-    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/django/db/models/base.py" />
+    <entry file="file://$PROJECT_DIR$/../.local/lib/python3.5/site-packages/numpy/core/arrayprint.py" />
+    <entry file="file://$PROJECT_DIR$/../.local/lib/python3.5/site-packages/django/db/models/base.py" />
     <entry file="file:///usr/lib/python3.5/getpass.py" />
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-1247971764/builtins.py" />
+    <entry file="file://$PROJECT_DIR$/../.PyCharmCE2018.3/system/python_stubs/-1247971764/builtins.py" />
     <entry file="file://$PROJECT_DIR$/target/dist.py" />
-    <entry file="file://$USER_HOME$/.local/lib/python3.5/site-packages/django/db/models/query.py" />
+    <entry file="file://$PROJECT_DIR$/../.local/lib/python3.5/site-packages/django/db/models/query.py" />
     <entry file="file:///usr/lib/python3.5/multiprocessing/pool.py" />
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-1247971764/numpy/core/_multiarray_umath.py" />
+    <entry file="file://$PROJECT_DIR$/../.PyCharmCE2018.3/system/python_stubs/-1247971764/numpy/core/_multiarray_umath.py" />
     <entry file="file://$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -798,29 +787,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pitctPrep.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="778">
-          <caret line="104" column="66" selection-start-line="104" selection-start-column="58" selection-end-line="104" selection-end-column="66" />
-          <folding>
-            <element signature="e#36#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/datatarget.json">
-      <provider selected="true" editor-type-id="LargeFileEditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/baseFrqComb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="275" column="13" lean-forward="true" selection-start-line="275" selection-start-column="13" selection-end-line="275" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pitctPrep.py" />
+    <entry file="file://$PROJECT_DIR$/datatarget.json" />
     <entry file="file://$PROJECT_DIR$/target/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="669">
@@ -871,32 +839,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pitchTarget.py">
+    <entry file="file://$PROJECT_DIR$/target/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8685">
-          <caret line="599" column="91" selection-start-line="599" selection-start-column="91" selection-end-line="599" selection-end-column="91" />
+        <state relative-caret-position="598">
+          <caret line="568" column="51" selection-start-line="568" selection-start-column="51" selection-end-line="568" selection-end-column="51" />
           <folding>
-            <element signature="e#65#102#0" expanded="true" />
+            <element signature="e#17#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.3/system/python_stubs/-98414044/builtins.py">
+    <entry file="file://$PROJECT_DIR$/target/targetTools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="57" column="80" selection-start-line="57" selection-start-column="76" selection-end-line="57" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#16#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../.PyCharmCE2018.3/system/python_stubs/-98414044/builtins.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="55470">
           <caret line="3698" column="8" selection-start-line="3698" selection-start-column="8" selection-end-line="3698" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/templates/wave.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2130">
-          <caret line="142" column="12" selection-start-line="142" selection-start-column="12" selection-end-line="142" selection-end-column="12" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -914,43 +880,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/templates/labeling.html">
+    <entry file="file://$PROJECT_DIR$/target/templates/wave.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        <state relative-caret-position="834">
+          <caret line="142" column="12" selection-start-line="142" selection-start-column="12" selection-end-line="142" selection-end-column="12" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pitchTarget.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="834">
+          <caret line="599" column="91" selection-start-line="599" selection-start-column="91" selection-end-line="599" selection-end-column="91" />
+          <folding>
+            <element signature="e#65#102#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/static/js/labeling.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="57" column="48" lean-forward="true" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="48" />
+        <state relative-caret-position="322">
+          <caret line="59" column="37" selection-start-line="59" selection-start-column="37" selection-end-line="59" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/templates/labeling.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="579">
+          <caret line="172" column="8" lean-forward="true" selection-start-line="172" selection-start-column="8" selection-end-line="172" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
+        <state relative-caret-position="675">
           <caret line="45" column="47" selection-start-line="45" selection-start-column="47" selection-end-line="45" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/targetTools.py">
+    <entry file="file://$PROJECT_DIR$/baseFrqComb.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="57" column="80" selection-start-line="57" selection-start-column="76" selection-end-line="57" selection-end-column="80" />
+        <state relative-caret-position="342">
+          <caret line="186" selection-start-line="186" selection-end-line="186" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="559" column="72" selection-start-line="559" selection-start-column="72" selection-end-line="559" selection-end-column="72" />
-          <folding>
-            <element signature="e#17#28#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="true" />
           </folding>
         </state>
       </provider>

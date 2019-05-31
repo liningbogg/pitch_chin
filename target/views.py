@@ -37,6 +37,7 @@ from .targetTools import RWLock
 from abc import abstractmethod
 import scipy
 from target.targetTools import targetTools
+from baseFrqComb import BaseFrqDetector
 
 # 归一化函数
 def MaxMinNormalization(x, minv, maxv):
@@ -583,10 +584,11 @@ class TargetView(View):
 			pass			
 		labelinfo.current_frame=current_frame
 		labelinfo.save()
+		# comb及combDescan音高参考
 		combRef=np.zeros(wave.frameNum)
 		combDescanRef=[np.zeros(wave.frameNum)]*2
 		try:
-			clips = Clip.objects.filter(title=title, create_user_id="combDescan", startingPos__lt=wave.frameNum).order_by('startingPos')
+			clips = Clip.objects.filter(title=title, create_user_id="combDescan", startingPos__lt=wave.frameNum)
 			for clip in clips:
 				pos=clip.startingPos
 				tar=pickle.loads(clip.tar)
@@ -594,14 +596,34 @@ class TargetView(View):
 				for pitch in tar:
 					combDescanRef[index][pos]=pitch
 					index=index+1
-			clips = Clip.objects.filter(title=title, create_user_id="comb", startingPos__lt=wave.frameNum).order_by('startingPos')
+			clips = Clip.objects.filter(title=title, create_user_id="comb", startingPos__lt=wave.frameNum)
 			for clip in clips:
 				pos=clip.startingPos
 				tar=pickle.loads(clip.tar)
 				combRef[pos]=tar[0]				
 		except Exception as e:
 			print(e)
-		context = {'title': title,'nfft': nfft, 'ee': ee, 'rmse': rmse, 'stopPos': list(vadrs['stopPos']),'manual_pos':manual_pos,'combDescanPrimary':list(combDescanRef[0]),'combDescanSecondary':list(combDescanRef[1]),'comb':list(combRef),'startPos': list(vadrs['startPos']),'ee_diff':list(vadrs['ee_diff']), "current_frame":current_frame,"extend_rad":extend_rad,"tone_extend_rad":tone_extend_rad, "frame_num":end, 'vad_thrart_EE':thrartEE, 'vad_thrart_RMSE':thrartRmse, 'vad_throp_EE':throp, 'create_user_id':user_id}
+		# 已标记音高
+		target = [[0] * wave.frameNum, [0] * wave.frameNum, [0] * wave.frameNum]  # 存储前三个音高的二维数组
+		try:
+			clips = Clip.objects.filter(title=title, create_user_id=request.user, startingPos__lt=wave.frameNum)
+			for clip in clips:
+				pos=clip.startingPos
+				tar=pickle.loads(clip.tar)
+				index=0;
+				for pitch in tar:
+					target[index][pos]=pitch
+					index=index+1
+		except Exception as e:
+			print(e)
+		# fft及中间结果
+		srcFFT=pickle.loads(Clip.objects.get(title=title, create_user_id="combDescan",startingPos=current_frame).src) 
+		srcFFT[0:int(30*nfft/fs)]=0 # 清空30hz以下信号
+		detectorDescan = BaseFrqDetector(True)  # 去扫描线算法
+		pitchCombDescan=detectorDescan.getpitch(srcFFT, fs, nfft, False)
+		medium=pitchCombDescan[2]
+
+		context = {'title': title,'fs':fs,'nfft': nfft, 'ee': ee, 'rmse': rmse, 'stopPos': list(vadrs['stopPos']),'manual_pos':manual_pos,'combDescanPrimary':list(combDescanRef[0]),'combDescanSecondary':list(combDescanRef[1]),'comb':list(combRef),'target':target,'startPos': list(vadrs['startPos']),'ee_diff':list(vadrs['ee_diff']),"srcFFT":list(srcFFT),"medium":list(medium),"current_frame":current_frame,"extend_rad":extend_rad,"tone_extend_rad":tone_extend_rad, "frame_num":end, 'vad_thrart_EE':thrartEE, 'vad_thrart_RMSE':thrartRmse, 'vad_throp_EE':throp, 'create_user_id':user_id}
 		return render(request, 'labeling.html', context)
 
 	@classmethod

@@ -102,7 +102,7 @@
 		
 	</div>
 	<div class="sampling_data" id="sampling_data" style="border-width:1px; border-style:solid; border-color:purple;">
-		<div class="sampling_fft" id="sampling_data" style="border-width:1px; border-style:solid; border-color:green;">
+		<div class="sampling_fft" id="sampling_fft" style="border-width:1px; border-style:solid; border-color:green;">
 
 		</div>
 		<div class="sampling_medium" id="sampling_medium" style="border-width:1px; border-style:solid; border-color:green;">
@@ -144,7 +144,38 @@
 	var end_pos = Math.max(0,current_frame+extend_rad);
 	end_pos = Math.min(end_pos,frame_end);
     addChart("",refChartDictSeries,refChartDictLine, current_frame,"local_pitch",start_pos,end_pos);
-
+</script>
+<script>
+	//已标记音高信息
+	var targetArr={{target|safe}};
+	var targetChartDictSeries={"target1":targetArr[0],"target2":targetArr[1],"target3":targetArr[2]};
+    var targetChartDictLine={
+		"stopPos":{{stopPos|safe}},
+        "startPos":{{startPos|safe}}	
+	};
+	var current_frame = {{current_frame|safe}};
+	var extend_rad = {{extend_rad|safe}};
+	var start_pos = Math.max(0,current_frame-extend_rad);
+	var frame_end = {{frame_num|safe}};
+	start_pos = Math.min(start_pos,frame_end);
+	var end_pos = Math.max(0,current_frame+extend_rad);
+	end_pos = Math.min(end_pos,frame_end);
+    addChart("",targetChartDictSeries,targetChartDictLine, current_frame,"local_target",start_pos,end_pos);
+</script>
+<script>
+	//fft显示
+	var srcChartDictSeries={"fft":{{srcFFT|safe}}};
+	var nfft={{nfft|safe}};
+	var fs={{fs|safe}};
+	srcChartDictLine=[];
+    addChart("",srcChartDictSeries,srcChartDictLine,440*nfft/fs,"sampling_fft",0,parseInt(4000*nfft/fs));
+</script>
+<script>
+	//medium梳状投影
+	var mediumChartDictSeries={"medium":{{medium|safe}}};
+	var fs={{fs|safe}};
+	mediumChartDictLine=[];
+    addChart("",mediumChartDictSeries,mediumChartDictLine,440*441000/fs,"sampling_medium",0,mediumChartDictSeries["medium"].length);
 </script>
 </body>
 </html>

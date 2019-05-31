@@ -174,6 +174,7 @@ class BaseFrqDetector:
         """
         minval = min(desamp[20:-1])  # 最小值
         maxval = np.mean(desamp[16:26])  # 最大值
+        print(minval,maxval)
         if (maxval - minval) < 1:
             return np.zeros(num)
         intercept = (maxval - minval) / 1000.0
@@ -231,7 +232,7 @@ class BaseFrqDetector:
         if self.showtestview:
             plt.subplot(231)
             plt.plot(np.arange(len(dataclip)), dataclip, label='amp-frq')
-        lowcutoff = int(40 * 441000.0 / fs)  # 最低截止频率对应的坐标
+        lowcutoff = int(32.5 * 441000.0 / fs)  # 最低截止频率对应的坐标
         highcutoff = int(1400 * 441000.0 / fs)  # 最高截止频率对应的坐标
         peaksearchpixes = int(3 * 441000 / fs)  # 寻峰间距
         peaksearchamp = 0.1  # 寻峰高度
@@ -254,17 +255,17 @@ class BaseFrqDetector:
 
         # 梳状变换, 2019-03-10 16:54:45
 
-        for k in np.arange(lowcutoff, highcutoff, 1):
+        for k in np.arange(1, highcutoff, 1):
             combtrans[k] = sum([resampy[i] for i in np.arange(0, lenresampy - 1, k)])
         if self.showtestview == 1:
             plt.subplot(233)
             plt.plot(np.arange(len(combtrans)), combtrans, label='combtrans')
 
         # 如果有去扫描参数,则去扫描
-        if self.isdescan:
+        if self.isdescan is True:
             # 用于降低采样
             desamp = [combtrans[m] for m in np.arange(0, len(combtrans), 10)]  # 10倍数降采样
-            desamp[0] = 1000
+            desamp[0] = np.max(desamp)
             if self.showtestview == 1:
                 plt.subplot(234)
                 plt.plot(np.arange(len(desamp)), desamp, label='Dscombtrans')
@@ -272,7 +273,7 @@ class BaseFrqDetector:
             if self.showtestview == 1:
                 plt.subplot(235)
                 plt.plot(np.arange(len(baseline)), baseline, label='baseline')
-            truetrans = combtrans - baseline
+            truetrans = combtrans-baseline
         else:
             truetrans = combtrans
 
