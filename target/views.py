@@ -586,13 +586,13 @@ class TargetView(View):
 		labelinfo.save()
 		# comb及combDescan音高参考
 		combRef=np.zeros(wave.frameNum)
-		combDescanRef=[np.zeros(wave.frameNum)]*2
+		combDescanRef=[[0] * wave.frameNum, [0] * wave.frameNum]
 		try:
 			clips = Clip.objects.filter(title=title, create_user_id="combDescan", startingPos__lt=wave.frameNum)
 			for clip in clips:
 				pos=clip.startingPos
 				tar=pickle.loads(clip.tar)
-				index=0;
+				index=0
 				for pitch in tar:
 					combDescanRef[index][pos]=pitch
 					index=index+1
@@ -622,8 +622,13 @@ class TargetView(View):
 		detectorDescan = BaseFrqDetector(True)  # 去扫描线算法
 		pitchCombDescan=detectorDescan.getpitch(srcFFT, fs, nfft, False)
 		medium=pitchCombDescan[2]
-
-		context = {'title': title,'fs':fs,'nfft': nfft, 'ee': ee, 'rmse': rmse, 'stopPos': list(vadrs['stopPos']),'manual_pos':manual_pos,'combDescanPrimary':list(combDescanRef[0]),'combDescanSecondary':list(combDescanRef[1]),'comb':list(combRef),'target':target,'startPos': list(vadrs['startPos']),'ee_diff':list(vadrs['ee_diff']),"srcFFT":list(srcFFT),"medium":list(medium),"current_frame":current_frame,"extend_rad":extend_rad,"tone_extend_rad":tone_extend_rad, "frame_num":end, 'vad_thrart_EE':thrartEE, 'vad_thrart_RMSE':thrartRmse, 'vad_throp_EE':throp, 'create_user_id':user_id}
+		context = {'title': title,'fs':fs,'nfft': nfft, 'ee': ee, 'rmse': rmse, 'stopPos': list(vadrs['stopPos']),
+					'manual_pos':manual_pos,'combDescanPrimary':list(combDescanRef[0]),
+					'combDescanSecondary':list(combDescanRef[1]),'comb':list(combRef),'target':target,
+					'startPos': list(vadrs['startPos']),'ee_diff':list(vadrs['ee_diff']),"srcFFT":list(srcFFT),
+					"medium":list(medium),"current_frame":current_frame,"extend_rad":extend_rad,
+					"tone_extend_rad":tone_extend_rad, "frame_num":end, 'vad_thrart_EE':thrartEE,
+					'vad_thrart_RMSE':thrartRmse, 'vad_throp_EE':throp, 'create_user_id':user_id}
 		return render(request, 'labeling.html', context)
 
 	@classmethod

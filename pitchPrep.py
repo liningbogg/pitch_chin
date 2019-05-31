@@ -40,7 +40,7 @@ def filterListDir(path,fmt):
 
 
 np.set_printoptions(threshold=sys.maxsize, linewidth=np.nan)
-class1_path = "../dataFiltered/guqin8/"
+class1_path = "/home/liningbo/文档/waveFiles/comb/"
 class1_list=filterListDir(class1_path, '.flac')
 class1_listLen=len(class1_list)
 Fs = 44100
@@ -90,7 +90,7 @@ for index in range(0,class1_listLen):
     filePath=baseName+'_%d'%Fs+'_%d/'%nfft
 
     for frame in np.arange(len(speech_stft)):
-        print([frame*nfft/Fs,"%.2f"%(frame/len(speech_stft)*100.0)]) #当前时刻
+        print(baseName,[frame*nfft/Fs,"%.2f"%(frame/len(speech_stft)*100.0)]) #当前时刻
         dataClip=np.copy(speech_stft[frame])
         dataClip[0:int(30*nfft/Fs)] = 0  # 清零30hz以下信号
         pool = multiprocessing.Pool(processes=2)
@@ -129,7 +129,7 @@ for index in range(0,class1_listLen):
             clip=Clip.objects.get(create_user_id=username2, title=baseName, startingPos=frame, length=1, nfft=nfft)
             clip.anote = "机器人_COMBDESCAN"
             clip.tar = pickle.dumps(np.array(tar))
-            clip.save(update_fields=["tar","anote"])
+            clip.save(update_fields=["tar", "anote"])
         except Clip.DoesNotExist:
             tar = []
             tar.append(referencePitchDeScan[0])
