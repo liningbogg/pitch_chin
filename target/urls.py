@@ -9,7 +9,8 @@ Function views
 Class-based views
     1. Add an import:  from other_app.views import Home
     2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
+Including another URLconf:q
+uu
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
@@ -38,5 +39,5 @@ urlpatterns = [
     path('register/', target_view.register),
     path('wave/get_clipFFT/', target_view.get_clipfft),
     url(r'^captcha', include('captcha.urls')),
-    url('^$', target_view.index)  # 新增代码
+    url('^$', target_view.index),
 ]
