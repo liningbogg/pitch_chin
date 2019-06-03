@@ -15,8 +15,9 @@ function addChart(title, dictSeries, dictLine, currentPos, MyDiv,start, end){
     //曲线参数设置
     var  options = {
         chart: {
-	    type: 'line',
+	    	type: 'line',
             zoomType: 'xy', //xy方向均可缩放
+			animation: false
         },
         boost: {
             useGPUTranslations: true
@@ -47,7 +48,8 @@ function addChart(title, dictSeries, dictLine, currentPos, MyDiv,start, end){
 			series: {
 				marker: {
 					enabled: false
-				}
+				},
+
 			},
 		},
     };

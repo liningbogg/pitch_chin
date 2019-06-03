@@ -31,7 +31,7 @@ body,div
     float:left;
     width:100%;
     top:1%;
-    height:20%;
+    height:15%;
 }
 /*主要信息*/
 .primary
@@ -76,7 +76,7 @@ body,div
 	left:1%;
     width:72%;
     top:0%;
-    height:24%;
+    height:30%;
 }
 /*局部音高标记*/
 .local_target
@@ -86,7 +86,7 @@ body,div
 	left:1%;
     width:72%;
     top:1%;
-    height:24%;
+    height:30%;
 }
 /*fft及其中间结果*/
 .sampling_data
@@ -96,7 +96,7 @@ body,div
 	left:1%;
     width:72%;
     top:2%;
-    height:48%;
+    height:36%;
 }
 /*fft*/
 .sampling_fft
@@ -126,5 +126,5 @@ body,div
 	left:0%;
     width:99.5%;
     top:1%;
-    height:19%;
+    height:24%;
 }
