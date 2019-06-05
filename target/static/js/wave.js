@@ -88,7 +88,6 @@ function AddFFT(title, pitchesArray, MyDiv, start, end){
 
 //添加wave播放
 function add_wave(waveFile){
-    console.log("hello");
     var file_path = waveFile;  // 绝对路径
     var spilt_arr = file_path.split(str="/");
     var file_name=spilt_arr[spilt_arr.length-1];  // 获取文件名

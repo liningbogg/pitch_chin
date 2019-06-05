@@ -203,6 +203,10 @@ class Chin:
         :param pitches:待解析的音高集合
         :return: 特定音高对应的可能的音位集合
         """
+        if isinstance(pitches,(list,np.ndarray)) is not True:
+            pitch=pitches
+            pitches = []
+            pitches.append(pitch)
         number = len(pitches)
         possiblepos = []  # 结果
         formatStr = ""  # 格式化结果，用于打印

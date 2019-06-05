@@ -11,108 +11,135 @@
 	<link rel="icon" href="/static/image/favicon.ico" mce_href=”/static/image/favicon.ico” type=”image/x-icon”>
 	<link rel="bookmark" href="/static/image/favicon.ico" mce_href=”/static/image/favicon.ico” type=”image/x-icon”>
 </head>
-<body>
 <div class="login" id="login" style="border-width:1px; color:blue">
     <a href="../index/">主页</a>
     {% include "login_info_base.html" %}
 </div>
-<div  class="vad" id="vad" style="border-width:1px; color:blue">
 
-</div>
-<div class="primary" id="primary" style="border-width:1px; border-style:solid; border-color:red;">
-	<div  class="info" id="info" style="border-width:1px; border-style:solid; border-color:green;">
-		<table border="" class="table_info" name="table_info" >
-			<thead>
+<div class="main" id="main">
+	<div class="display" name="display" style="border-width:1px; border-style:solid; border-color:green">
+		<div  class="vad" id="vad" style="border-width:1px; color:blue">
+		</div>
+		<div class="local_pitch" id="local_pitch" style="border-width:1px; border-style:solid; border-color:blue;">
+		</div>
+		<div class="local_target" id="local_target" style="border-width:1px; border-style:solid; border-color:red;">
+		</div>
+		<div class="sampling_data" id="sampling_data" style="border-width:1px; border-style:solid; border-color:purple;">
+			<div class="sampling_fft" id="sampling_fft" style="border-width:1px; border-style:solid; border-color:green;">
+			</div>
+			<div class="sampling_medium" id="sampling_medium" style="border-width:1px; border-style:solid; border-color:green;">
+			</div>
+		</div>
+			<div class="ref_info" id="ref_info" style="border-width:1px; border-style:solid; border-color:blue;">
+				{{possiblePos|safe}}
+			</div>
+	</div>
+
+	<div class = "opt" name="opt" >
+		<div class="info" id="info" style="border-width:1px; border-style:solid; border-color:green;">
+			<table border="" class="table_info" id="table_info" >
+				<thead>
+					<tr>
+						<th >属性</th>
+						<th >数值</th>
+					</tr>
+				</thead>
 				<tr>
-					<th >属性</th>
-					<th >数值</th>
+					<td>title</td>
+					<td>
+						<input type="text" id="title" readonly="true" value={{title|safe}} />
+					</td>
 				</tr>
-			</thead>
-			<tr>
-				<td>title</td>
-				<td>
-					<input type="text" name="title" readonly="true" value={{title|safe}} />
-				</td>
-			</tr>
-			<tr>
-				<td>frameNum</td>
-				<td>
-					<input type="text" name="frame_num" readonly="true" value={{frame_num|safe}} />
-				</td>
-			</tr>
-			<tr>
-				<td style="font-size:24px;line-height:1;color:green">current_frame</td>
-				<td>
-					<input type="text" name="current_frame" readonly="true" value={{current_frame|safe}} style="color:green" />
-				</td>
-			</tr>
-			<tr>
-				<td>manual_pos</td>
-				<td>
-					<input type="number" name="manual_pos"  value={{manual_pos|safe}} placeholder="指定下次标记的位置，否则置为负数"/>
-				</td>
-			</tr>
-			<tr>
-				<td>nfft</td>
-				<td>
-					<input type="text" name="nfft" readonly="true" value={{nfft|safe}} />
-				</td>
-			</tr>
-			<tr>
-				<td>extend_rad</td>
-				<td>
-					<input type="number" name="extend_rad" value={{extend_rad|safe}} placeholder="当前标记视窗半径"/>
-				</td>
-			</tr>
-			<tr>
-				<td>tone_extend_rad</td>
-				<td>
-					<input type="number" name="tone_extend_rad" value={{tone_extend_rad|safe}} placeholder="音符参考半径"/>
-				</td>
-			</tr>
-			<tr>
-				<td>vad_thrart_EE</td>
-				<td>
-					<input type="number" name="vad_thrart_EE" value={{vad_thrart_EE|safe}} placeholder="起始位置判定熵阈值"/>
-				</td>
-			</tr>
-			<tr>
-				<td>vad_throp_EE</td>
-				<td>
-					<input type="number" name="vad_throp_EE" value={{vad_throp_EE|safe}} placeholder="终止位置判定熵阈值"/>
-				</td>
-			</tr>
-			<tr>
-				<td>vad_thrart_RMSE</td>
-				<td>
-					<input type="number" name="vad_thrart_RMSE" value={{vad_thrart_RMSE|safe}} placeholder="起始位置判定能量阈值"/>
-				</td>
-			</tr>
-			<tr>
-				<td>create_user_id</td>
-				<td>
-					<input type="text" readonly="true" name="create_user_id" value={{create_user_id|safe}} />
-				</td>
-			</tr>
-		</table>
-	</div>
-	<div class="local_pitch" id="local_pitch" style="border-width:1px; border-style:solid; border-color:blue;">
-		
-	</div>
-	<div class="local_target" id="local_target" style="border-width:1px; border-style:solid; border-color:red;">
-		
-	</div>
-	<div class="sampling_data" id="sampling_data" style="border-width:1px; border-style:solid; border-color:purple;">
-		<div class="sampling_fft" id="sampling_fft" style="border-width:1px; border-style:solid; border-color:green;">
-
+				<tr>
+					<td>frameNum</td>
+					<td>
+						<input type="text" id="frame_num" readonly="true" value={{frame_num|safe}} />
+					</td>
+				</tr>
+				<tr>
+					<td style="font-size:16px;line-height:1;color:green">current_frame</td>
+					<td>
+						<input type="text" id="current_frame" readonly="true" value={{current_frame|safe}} style="color:green" />
+					</td>
+				</tr>
+				<tr>
+					<td>manual_pos</td>
+					<td>
+						<input type="number" id="manual_pos"  value={{manual_pos|safe}} placeholder="指定下次标记的位置，否则置为负数"/>
+					</td>
+				</tr>
+				<tr>
+					<td>nfft</td>
+					<td>
+						<input type="text" id="nfft" readonly="true" value={{nfft|safe}} />
+					</td>
+				</tr>
+				<tr>
+					<td>extend_rad</td>
+					<td>
+						<input type="number" id="extend_rad" value={{extend_rad|safe}} placeholder="当前标记视窗半径"/>
+					</td>
+				</tr>
+				<tr>
+					<td>tone_extend_rad</td>
+					<td>
+						<input type="number" id="tone_extend_rad" value={{tone_extend_rad|safe}} placeholder="音符参考半径"/>
+					</td>
+				</tr>
+				<tr>
+					<td>vad_thrart_EE</td>
+					<td>
+						<input type="number" id="vad_thrart_EE" value={{vad_thrart_EE|safe}} placeholder="起始位置判定熵阈值"/>
+					</td>
+				</tr>
+				<tr>
+					<td>vad_throp_EE</td>
+					<td>
+						<input type="number" id="vad_throp_EE" value={{vad_throp_EE|safe}} placeholder="终止位置判定熵阈值"/>
+					</td>
+				</tr>
+				<tr>
+					<td>vad_thrart_RMSE</td>
+					<td>
+						<input type="number" id="vad_thrart_RMSE" value={{vad_thrart_RMSE|safe}} placeholder="起始位置判定能量阈值"/>
+					</td>
+				</tr>
+				<tr>
+					<td>create_user_id</td>
+					<td>
+						<input type="text" readonly="true" id="create_user_id" value={{create_user_id|safe}} />
+					</td>
+				</tr>
+			</table>
 		</div>
-		<div class="sampling_medium" id="sampling_medium" style="border-width:1px; border-style:solid; border-color:green;">
-
+		<div class="ref_set" id="ref_set" style="border-width:1px; border-style:solid; border-color:red;">
+			音高
+			<input type="number" id="primary_pitch" onfocus="if(this.value==this.defaultValue){this.value=''}"
+				   onblur="if(this.value==''){this.value=this.defaultValue}"
+				   value={{current_tar|safe}} placeholder="待预测音位的音高"/>
+			<input type="button" name="sub_primary_pitch" onclick="cal_pitch_pos('{{title}}')" value="音位估算">
+		</div>
+		<div class="filter_set" id="filter_set" style="border-width:1px; border-style:solid; border-color:red;">
+				频率
+				<input type="number" id="filter_frq" onfocus="if(this.value==this.defaultValue){this.value=''}"
+					   onblur="if(this.value==''){this.value=this.defaultValue}" value={{current_tar|safe}} placeholder="fft过滤频率"/>
+				带宽
+				<input type="number" id="filter_width" onfocus="if(this.value==this.defaultValue){this.value=''}"
+					   onblur="if(this.value==''){this.value=this.defaultValue}" value={{filter_rad|safe}} placeholder="fft过滤宽度设置"/>
+				<input type="button" id="sub_filter_opt"
+					   onclick="filter_fft({{srcFFT|safe}},'{{title|safe}}',{{current_frame|safe}},{{nfft|safe}},{{fs|safe}})" value="重新过滤">
+		</div>
+		<div class="play_clips" id="play_clips" style="border-width:1px; border-style:solid; border-color:red;">
+				start
+				<input type="number" id="play_start" onfocus="if(this.value==this.defaultValue){this.value=''}"
+					   onblur="if(this.value==''){this.value=this.defaultValue}"  placeholder="起始帧"/>
+				end
+				<input type="number" id="play_end" onfocus="if(this.value==this.defaultValue){this.value=''}"
+					   onblur="if(this.value==''){this.value=this.defaultValue}"  placeholder="终止帧"/>
+				<input type="button" id="sub_play_clips"
+					   onclick="play_clips('{{title|safe}}',{{nfft|safe}},{{fs|safe}})" value="播放片段">
 		</div>
 	</div>
-</div>
-<div class="ref" id="ref" style="border-width:1px; border-style:solid; border-color:red;">
-
 </div>
 <script>
     //关于端点检测的字典数组
@@ -165,7 +192,7 @@
 </script>
 <script>
 	//fft显示
-	var srcChartDictSeries={"fft":{{srcFFT|safe}}};
+	var srcChartDictSeries={"fft":{{srcFFT|safe}},"filter_fft":{{filter_fft|safe}}};
 	var nfft={{nfft|safe}};
 	var fs={{fs|safe}};
 	srcChartDictLine=[];
@@ -177,6 +204,21 @@
 	var fs={{fs|safe}};
 	mediumChartDictLine=[];
     addChart("",mediumChartDictSeries,mediumChartDictLine,440*441000/fs,"sampling_medium",0,mediumChartDictSeries["medium"].length);
+</script>
+<script>
+	var current_frame = {{current_frame|safe}};
+	var extend_rad = {{extend_rad|safe}};
+	var start_pos = Math.max(0,current_frame-extend_rad);
+	var frame_end = {{frame_num|safe}};
+	start_pos = Math.min(start_pos,frame_end);
+	var end_pos = Math.max(0,current_frame+extend_rad);
+	end_pos = Math.min(end_pos,frame_end);
+	document.getElementById('play_start').defaultValue=start_pos;
+	document.getElementById('play_end').defaultValue=end_pos;
+</script>
+<script>
+	//非图形信息显示
+
 </script>
 </body>
 </html>

@@ -46,6 +46,16 @@ def MaxMinNormalization(x, minv, maxv):
 	y = (x - Min) / (Max - Min + 0.0000000001) * (maxv - minv) + minv
 	return y
 
+# filter by basefrq
+def filterByBasefrq(src, basefrq, width, nfft, fs):
+	width = width*nfft/fs
+	basefrq = basefrq*nfft/fs
+	tar = np.copy(src)
+	num = min(int(len(src) / basefrq), 30)
+	for i in np.arange(num):
+		frq = i * basefrq
+		tar[int(frq - width):int(frq + width)] = min(src[int(frq - width)], src[int(frq + width)])
+	return tar
 
 class MemItem:
 	"""
@@ -610,26 +620,82 @@ class TargetView(View):
 			for clip in clips:
 				pos=clip.startingPos
 				tar=pickle.loads(clip.tar)
-				index=0;
+				index=0
 				for pitch in tar:
-					target[index][pos]=pitch
-					index=index+1
+					target[index][pos] = pitch
+					index = index+1
 		except Exception as e:
 			print(e)
 		# fft及中间结果
 		srcFFT=pickle.loads(Clip.objects.get(title=title, create_user_id="combDescan",startingPos=current_frame).src) 
 		srcFFT[0:int(30*nfft/fs)]=0 # 清空30hz以下信号
+		filter_rad = labelinfo.filter_rad  # 过滤带宽半径
+		current_clip = Clip.objects.get(title=title, create_user_id="combDescan", startingPos=current_frame)
+		current_tar = pickle.loads(current_clip.tar)[0]  # 当前帧主音高估计
+		if current_tar>40:
+			filter_fft = filterByBasefrq(srcFFT, current_tar, filter_rad, nfft, fs)  # 过滤后fft
+		else:
+			filter_fft = []
 		detectorDescan = BaseFrqDetector(True)  # 去扫描线算法
 		pitchCombDescan=detectorDescan.getpitch(srcFFT, fs, nfft, False)
 		medium=pitchCombDescan[2]
+		# 可能的位置
+		if wave.chin is not None:
+			# 获得chin class
+			chin = pickle.loads(wave.chin)
+		else:
+			# chin class 不存在
+			chin = None
+		if chin is not None:
+			possiblePos = chin.cal_possiblepos(current_tar)[1].replace("\n", "<br>")
+		else:
+			possiblePos = "尚未设置chin信息"
 		context = {'title': title,'fs':fs,'nfft': nfft, 'ee': ee, 'rmse': rmse, 'stopPos': list(vadrs['stopPos']),
 					'manual_pos':manual_pos,'combDescanPrimary':list(combDescanRef[0]),
-					'combDescanSecondary':list(combDescanRef[1]),'comb':list(combRef),'target':target,
+					'combDescanSecondary':list(combDescanRef[1]), 'comb':list(combRef),'target':target,
 					'startPos': list(vadrs['startPos']),'ee_diff':list(vadrs['ee_diff']),"srcFFT":list(srcFFT),
+				    'filter_fft':list(filter_fft), 'current_tar':current_tar,"filter_rad":filter_rad,
 					"medium":list(medium),"current_frame":current_frame,"extend_rad":extend_rad,
 					"tone_extend_rad":tone_extend_rad, "frame_num":end, 'vad_thrart_EE':thrartEE,
-					'vad_thrart_RMSE':thrartRmse, 'vad_throp_EE':throp, 'create_user_id':user_id}
+					'vad_thrart_RMSE':thrartRmse, 'vad_throp_EE':throp, 'create_user_id':user_id,'possiblePos':possiblePos}
 		return render(request, 'labeling.html', context)
+
+	@method_decorator(login_required)
+	def cal_pitch_pos(self, request):
+		title = request.GET.get('title')
+		user_id = str(request.user)
+		primary_pitch = float(request.GET.get('primary_pitch'))
+		wave = Wave.objects.get(create_user_id=user_id, title=title)
+		if wave.chin is not None:
+			# 获得chin class
+			chin = pickle.loads(wave.chin)
+		else:
+			# chin class 不存在
+			chin = None
+		if chin is not None:
+			possiblePos = chin.cal_possiblepos(primary_pitch)[1].replace("\n", "<br>")
+		else:
+			possiblePos = "尚未设置chin信息"
+		return HttpResponse(possiblePos)
+
+	@method_decorator(login_required)
+	def filter_fft(selfs, request):
+		title = request.GET.get('title')
+		user_id = str(request.user)
+		currentPos = int(request.GET.get('currentPos'))
+		filter_frq = float(request.GET.get('filter_frq'))
+		filter_width = float(request.GET.get('filter_width'))
+		nfft = int(request.GET.get('nfft'))
+		fs = int(request.GET.get('fs'))
+		try:
+			srcFFT=pickle.loads(Clip.objects.get(title=title, create_user_id="combDescan", startingPos=currentPos).src)
+			srcFFT[0:int(30 * nfft / fs)] = 0  # 清空30hz以下信号
+			fft_filtered = filterByBasefrq(srcFFT, filter_frq, filter_width, nfft, fs)  # 过滤后fft
+			fft_filtered=fft_filtered.tolist()
+			return HttpResponse(json.dumps(fft_filtered))
+		except Exception as e:
+			print(e)
+			return None
 
 	@classmethod
 	@method_decorator(login_required)

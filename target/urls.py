@@ -30,6 +30,7 @@ urlpatterns = [
     path('copywaves/sub_and_execute/', target_view.sub_and_execute_copywaves),
     path('wave/', target_view.wave_view),
     path('wave/get_phrase/', target_view.get_phrase),
+    path('labeling/get_phrase/', target_view.get_phrase),
     path('wave/post_phrase/', target_view.post_phrase),
     path('wave/access/', target_view.db_access),
     path('labeling/', target_view.labeling),
@@ -38,6 +39,8 @@ urlpatterns = [
     path('logout/', target_view.logout),
     path('register/', target_view.register),
     path('wave/get_clipFFT/', target_view.get_clipfft),
+    path('labeling/cal_pitch_pos/', target_view.cal_pitch_pos),
+    path('labeling/filter_fft/', target_view.filter_fft),
     url(r'^captcha', include('captcha.urls')),
     url('^$', target_view.index),
 ]

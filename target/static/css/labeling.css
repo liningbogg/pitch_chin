@@ -13,8 +13,9 @@ body,div
     font-size:18px;
     top:0%;
     height:3%;
-    width:100%;
+    width:24%;
 }
+
 /*主界面*/
 .main
 {
@@ -22,7 +23,16 @@ body,div
     float:left;
     width:100%;
     top:1%;
-    height:90%;
+    height:98%;
+}
+/*显示部分*/
+.display
+{
+    position:relative;
+    float:left;
+    width:75%;
+    top:1%;
+    height:96%;
 }
 /*端点检测信息*/
 .vad
@@ -31,52 +41,18 @@ body,div
     float:left;
     width:100%;
     top:1%;
-    height:15%;
+    height:16%;
 }
-/*主要信息*/
-.primary
-{
-    position:relative;
-    float:left;
-    width:100%;
-    top:1%;
-    height:55%;
-}
-/*参数信息*/
-.info
-{
-    position:relative;
-	float:right;
-	right:1%;
-    width:25%;
-    top:0%;
-    height:100%;
-	overflow-y:auto;
-}
-.table_info
-{
-	width:98%;
-	table-layout:fixed;
-}
-.table_info tr td{
-	font-size:24px;
-	line-height:1;
-}
-.table_info tr td input{
-	width:98%;
-	table-layout:fixed;
-	font-size:24px;
-	line-height:1;
-}
+
 /*局部音高参考*/
 .local_pitch
 {
     position:relative;
 	float:left;
 	left:1%;
-    width:72%;
+    width:98%;
     top:0%;
-    height:30%;
+    height:16%;
 }
 /*局部音高标记*/
 .local_target
@@ -84,9 +60,9 @@ body,div
     position:relative;
 	float:left;
 	left:1%;
-    width:72%;
+    width:98%;
     top:1%;
-    height:30%;
+    height:16%;
 }
 /*fft及其中间结果*/
 .sampling_data
@@ -94,9 +70,9 @@ body,div
     position:relative;
     float:left;
 	left:1%;
-    width:72%;
+    width:98%;
     top:2%;
-    height:36%;
+    height:16%;
 }
 /*fft*/
 .sampling_fft
@@ -119,12 +95,110 @@ body,div
     height:98%;
 }
 /*标记参考，包括历史信息和当前帧指法推测*/
-.ref
-{
+.ref_info{
     position:relative;
     float:left;
-	left:0%;
-    width:99.5%;
+	left:1%;
+    width:98%;
+    top:3%;
+    height:14%;
+    font-size:14px;
+    overflow-y:auto;
+    overflow-x:auto;
+}
+.ref_set{
+    position:relative;
+    float:left;
+	left:0.5%;
+    width:25%;
     top:1%;
-    height:24%;
+    height:98%;
+    overflow-y:auto;
+    overflow-x:auto;
+}
+/*参数设置及其他操作*/
+.opt{
+    position:relative;
+    float:left;
+	left:0.5%;
+    width:24%;
+    top:1%;
+    height:96%;
+}
+/*参数信息*/
+.info
+{
+    position:relative;
+	float:left;
+	left:0%;
+    width:100%;
+    top:0%;
+    height:50%;
+	overflow-y:auto;
+}
+/*info 中table样式*/
+.table_info
+{
+	width:98%;
+	table-layout:fixed;
+}
+.table_info tr td{
+	font-size:16px;
+	line-height:1;
+}
+.table_info tr td input{
+	width:98%;
+	table-layout:fixed;
+	font-size:16px;
+	line-height:1;
+}
+/*参考音高参数设置*/
+.ref_set
+{
+    position:relative;
+	float:left;
+	left:0%;
+    width:100%;
+    top:0%;
+    height:5%;
+    display:table-row;
+	overflow-y:auto;
+}
+/*fft过滤参数设置*/
+.filter_set
+{
+    position:relative;
+	float:left;
+	left:0%;
+    width:100%;
+    top:0%;
+    height:5%;
+    display:table-row;
+	overflow-y:auto;
+}
+.filter_set input
+{
+    width:20%;
+	table-layout:fixed;
+	font-size:14px;
+	line-height:1;
+}
+/*播放片段*/
+.play_clips
+{
+    position:relative;
+	float:left;
+	left:0%;
+    width:100%;
+    top:0%;
+    height:5%;
+    display:table-row;
+	overflow-y:auto;
+}
+.play_clips input
+{
+    width:20%;
+	table-layout:fixed;
+	font-size:14px;
+	line-height:1;
 }
