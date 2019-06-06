@@ -30,9 +30,12 @@
 			<div class="sampling_medium" id="sampling_medium" style="border-width:1px; border-style:solid; border-color:green;">
 			</div>
 		</div>
-			<div class="ref_info" id="ref_info" style="border-width:1px; border-style:solid; border-color:blue;">
-				{{possiblePos|safe}}
-			</div>
+		<div class="ref_info" id="ref_info" style="border-width:1px; border-style:solid; border-color:blue;">
+			{{possiblePos|safe}}
+		</div>
+		<div class="tone_info" id="tone_info" style="border-width:1px; border-style:solid; border-color:red;">
+
+		</div>
 	</div>
 
 	<div class = "opt" name="opt" >
@@ -217,6 +220,7 @@
     addChart("",mediumChartDictSeries,mediumChartDictLine,440*441000/fs,"sampling_medium",0,mediumChartDictSeries["medium"].length);
 </script>
 <script>
+	//播放音乐片段
 	var current_frame = {{current_frame|safe}};
 	var extend_rad = {{extend_rad|safe}};
 	var start_pos = Math.max(0,current_frame-extend_rad);
@@ -228,8 +232,24 @@
 	document.getElementById('play_end').defaultValue=end_pos;
 </script>
 <script>
-	//非图形信息显示
-
+	//显示tones
+	var tones_local={{tones_local|safe}};
+	var table_str="<table border='' class='table_tones' id='table_tones' >";
+	table_str=table_str+"<tr><td>pos</td>";
+	for (tone in tones_local)
+	{
+		table_str=table_str+'<td>'+tones_local[tone].fields.pos+'</td>';
+	}
+	table_str=table_str+"</tr>";
+	table_str=table_str+"<tr><td>tone</td>";
+	for (tone in tones_local)
+	{
+		table_str=table_str+'<td>'+tones_local[tone].fields.tone+'</td>';
+	}
+	table_str=table_str+"</tr>";
+	table_str=table_str+"</table>"
+	console.log(table_str);
+	document.getElementById('tone_info').innerHTML=table_str;
 </script>
 </body>
 </html>

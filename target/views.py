@@ -586,7 +586,7 @@ class TargetView(View):
 			else:
 				candidateFrame = clips.aggregate(Max('startingPos'))['startingPos__max']
 				current_frame = candidateFrame+1
-				current_frame = min(wave.frameNum-1,current_frame)
+				current_frame = min(wave.frameNum-1, current_frame)
 		else:
 			# 指定位置
 			labelinfo.manual_pos=-1	# 指定位置只生效一次
@@ -594,6 +594,11 @@ class TargetView(View):
 			pass			
 		labelinfo.current_frame=current_frame
 		labelinfo.save()
+		# 收集tones
+		tones_start = max(current_frame-tone_extend_rad, 0)
+		tones_end = min(current_frame+tone_extend_rad, wave.frameNum)
+		tones_local_set = Tone.objects.filter(title=title,create_user_id=user_id, pos__range=(tones_start,tones_end))
+		tones_local = serializers.serialize("json", tones_local_set)
 		# comb及combDescan音高参考
 		combRef=np.zeros(wave.frameNum)
 		combDescanRef=[[0] * wave.frameNum, [0] * wave.frameNum]
@@ -651,7 +656,7 @@ class TargetView(View):
 		else:
 			possiblePos = "尚未设置chin信息"
 		context = {'title': title,'fs':fs,'nfft': nfft, 'ee': ee, 'rmse': rmse, 'stopPos': list(vadrs['stopPos']),
-					'manual_pos':manual_pos,'combDescanPrimary':list(combDescanRef[0]),
+					'manual_pos':manual_pos,'combDescanPrimary':list(combDescanRef[0]), 'tones_local':tones_local,
 					'combDescanSecondary':list(combDescanRef[1]), 'comb':list(combRef),'target':target,
 					'startPos': list(vadrs['startPos']),'ee_diff':list(vadrs['ee_diff']),"srcFFT":list(srcFFT),
 				    'filter_fft':list(filter_fft), 'current_tar':current_tar,"filter_rad":filter_rad,
