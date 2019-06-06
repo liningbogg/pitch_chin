@@ -136,8 +136,19 @@
 				end
 				<input type="number" id="play_end" onfocus="if(this.value==this.defaultValue){this.value=''}"
 					   onblur="if(this.value==''){this.value=this.defaultValue}"  placeholder="终止帧"/>
+				fs
+				<input type="number" id="play_fs" onfocus="this.value=''"
+					   onblur="if(this.value==''){this.value=this.defaultValue}" value={{play_fs|safe}}
+					   placeholder="采样率" list="play_fs_list"/>
+				<datalist id="play_fs_list">
+					<option value="44100"></option>
+					<option value="22050"></option>
+					<option value="13230"></option>
+					<option value="8820"></option>
+					<option value="4410"></option>
+				</datalist>
 				<input type="button" id="sub_play_clips"
-					   onclick="play_clips('{{title|safe}}',{{nfft|safe}},{{fs|safe}})" value="播放片段">
+					   onclick="play_clips('{{title|safe}}',{{nfft|safe}})" value="播放">
 		</div>
 	</div>
 </div>

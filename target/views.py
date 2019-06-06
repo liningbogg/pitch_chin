@@ -97,7 +97,7 @@ class MemItem:
 			print(self.user_id+"_"+self.title+self.val_list[4]+" 缓存过时")
 			return True
 		else:
-			print(self.user_id+"_"+self.title+self.val_list[4]+":"+str(self.obsolete)+"|"+str((datetime.now() - self.timestamp)))
+			print(self.user_id+"_"+self.title+"_"+self.val_list[4]+"_"+str(self.fs)+":"+str(self.obsolete)+"|"+str((datetime.now() - self.timestamp)))
 			return False
 
 
@@ -222,7 +222,7 @@ class WaveMemWave(WaveMem):
 		sub_wave = []
 		self.rwLock_container.rlock.acquire()
 		try:
-			waveKey = user_id + "_" + title + "_" + "wave"	# 例子 pi_秋风词_wave
+			waveKey = user_id + "_" + title + "_" + "wave_"+str(fs)	 # 例子 pi_秋风词_wave_44100
 			if waveKey in self.container.keys():
 				sub_wave = self.container[waveKey].get_subwave(start * nfft, end * nfft)
 				print(waveKey + " 缓存命中")
@@ -236,7 +236,7 @@ class WaveMemWave(WaveMem):
 					else:
 						# 如果再次判断没有key则此时写入写入数据
 						wave = Wave.objects.get(create_user_id=user_id, title=title)
-						stream = librosa.load(wave.waveFile, mono=False, sr=None)[0][0]  # 以Fs重新采样
+						stream = librosa.load(wave.waveFile, mono=False, sr=fs)[0][0]  # 以Fs重新采样
 						mem_item = MemItem_Wave(user_id=user_id, title=title, fs=fs, nfft=nfft,
 												timestamp=datetime.now(),
 												wave=stream, obsolete=timedelta(minutes=120))
@@ -244,7 +244,7 @@ class WaveMemWave(WaveMem):
 						sub_wave = self.container[waveKey].get_subwave(start * nfft, end * nfft)
 						print(waveKey + " 未命中")
 				except Exception as addcacheError:
-					print(addcacheError)
+					print("读取错误:"+addcacheError)
 				finally:
 					self.rwLock_container.wlock.release()
 					self.rwLock_container.rlock.acquire()
@@ -655,7 +655,7 @@ class TargetView(View):
 					'combDescanSecondary':list(combDescanRef[1]), 'comb':list(combRef),'target':target,
 					'startPos': list(vadrs['startPos']),'ee_diff':list(vadrs['ee_diff']),"srcFFT":list(srcFFT),
 				    'filter_fft':list(filter_fft), 'current_tar':current_tar,"filter_rad":filter_rad,
-					"medium":list(medium),"current_frame":current_frame,"extend_rad":extend_rad,
+					"medium":list(medium),"current_frame":current_frame,"extend_rad":extend_rad,'play_fs':labelinfo.play_fs,
 					"tone_extend_rad":tone_extend_rad, "frame_num":end, 'vad_thrart_EE':thrartEE,
 					'vad_thrart_RMSE':thrartRmse, 'vad_throp_EE':throp, 'create_user_id':user_id,'possiblePos':possiblePos}
 		return render(request, 'labeling.html', context)

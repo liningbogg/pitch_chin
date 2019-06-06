@@ -98,10 +98,11 @@ body,div
 .ref_info{
     position:relative;
     float:left;
+    display:table;
 	left:1%;
     width:98%;
     top:3%;
-    height:14%;
+    height:4%;
     font-size:14px;
     overflow-y:auto;
     overflow-x:auto;
@@ -130,10 +131,11 @@ body,div
 {
     position:relative;
 	float:left;
+	display:table;
 	left:0%;
     width:100%;
     top:0%;
-    height:50%;
+    height:40%;
 	overflow-y:auto;
 }
 /*info 中table样式*/
@@ -152,6 +154,8 @@ body,div
 	font-size:16px;
 	line-height:1;
 }
+/*音阶信息*/
+
 /*参考音高参数设置*/
 .ref_set
 {
@@ -197,8 +201,15 @@ body,div
 }
 .play_clips input
 {
-    width:20%;
+    width:17%;
 	table-layout:fixed;
 	font-size:14px;
 	line-height:1;
 }
+/*去除num小箭头*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"]{-moz-appearance:textfield;}

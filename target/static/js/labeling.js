@@ -137,10 +137,13 @@ function filter_fft(srcFFT,title,currentPos,nfft,fs)
     };
 }
 //播放片段
-function play_clips(title,nfft,fs)
+function play_clips(title,nfft)
 {
     var play_start=document.getElementById('play_start').value;
     var play_end=document.getElementById('play_end').value;
+    var fs = document.getElementById('play_fs').value;
+    nfft=nfft*fs/44100;
+    console.log(nfft);
     var phrase=new Audio();  // 音乐片段播放器
     phrase.controls=false;  // 设置显示播放控件
     phrase.autoplay="autoplay";

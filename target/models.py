@@ -46,6 +46,7 @@ class Labeling(BaseModel):
     vad_thrart_RMSE = models.FloatField(default=0.1)
     vad_throp_EE = models.FloatField(default=0.1)
     filter_rad = models.FloatField(default=30)
+    play_fs = models.IntegerField(default=44100)  # 用于记录当前片段播放的fs
     class Meta:
         unique_together = ["title", "create_user_id", "nfft"]
 

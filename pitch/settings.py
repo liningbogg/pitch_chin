@@ -129,6 +129,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [
     '../static/',
-	'/home/liningbo/waveFiles/'
+    '/home/liningbo/waveFiles/'
 ]
 AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend',)
