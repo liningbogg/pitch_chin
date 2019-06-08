@@ -43,7 +43,7 @@ body,div
     float:left;
     width:100%;
     top:1%;
-    height:18%;
+    height:15%;
 }
 
 /*局部音高参考*/
@@ -54,7 +54,7 @@ body,div
 	left:1%;
     width:98%;
     top:0%;
-    height:18%;
+    height:15%;
 }
 /*局部音高标记*/
 .local_target
@@ -64,7 +64,7 @@ body,div
 	left:1%;
     width:98%;
     top:1%;
-    height:18%;
+    height:15%;
 }
 /*fft及其中间结果*/
 .sampling_data
@@ -74,7 +74,7 @@ body,div
 	left:1%;
     width:98%;
     top:2%;
-    height:18%;
+    height:15%;
 }
 /*fft*/
 .sampling_fft
@@ -110,16 +110,12 @@ body,div
     overflow-y:auto;
     overflow-x:auto;
 }
-.strings_set input
-{
-    font-size:14px;
-	line-height:1;
-	width:100%;
-}
+
 .strings_set tr td
 {
     font-size:14px;
 	line-height:1;
+	width:12%;
 }
 .strings_set tr td input
 {
@@ -128,6 +124,29 @@ body,div
 	font-size:14px;
 	line-height:1;
 }
+
+/*提交定弦*/
+.sub_strings_set
+{
+    position:relative;
+    float:left;
+    display:table;
+	left:0%;
+    width:100%;
+    top:0%;
+    height:4%;
+    font-size:16px;
+    overflow-y:auto;
+    overflow-x:auto;
+}
+.sub_strings_set input
+{
+    float:right;
+    font-size:14px;
+	line-height:1;
+	width:20%;
+}
+
 /*定弦信息*/
 .strings_info
 {
@@ -147,7 +166,7 @@ body,div
 {
     font-size:16px;
 	line-height:1;
-	width:12%;
+	width:10%;
 }
 
 /*标记参考，包括历史信息和当前帧指法推测*/

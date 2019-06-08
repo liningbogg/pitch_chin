@@ -40,7 +40,8 @@ function addChart(title, dictSeries, dictLine, currentPos, MyDiv,start, end){
             enabled:false
 		},
         xAxis: {
-            categories: index.slice(start,end)
+            categories: index.slice(start,end),
+            tickInterval:10
         },
 		yAxis: {
 		    tickInterval: 0.05
@@ -112,6 +113,7 @@ function cal_pitch_pos(title)
         }
     };
 }
+
 //重新过滤ｆｆｔ
 function filter_fft(srcFFT,title,currentPos,nfft,fs)
 {
@@ -169,9 +171,10 @@ function play_clips(title,nfft)
         }
     };
 }
+
 //设置strings
-function sub_strings()
+function sub_strings(title)
 {
-    console.log("hello");
-    alert("hello");
+    var test = document.getElementById("string_1").value;
+    console.log(test);
 }

@@ -118,6 +118,49 @@
 			</table>
 		</div>
 		<div class="strings_set" id="strings_set" style="border-width:1px; border-style:solid; border-color:blue;">
+			<table border="" class="strings_set_table">
+				<tr>
+					<td>1弦</td><td>2弦</td><td>3弦</td><td>4弦</td><td>5弦</td><td>6弦</td><td>7弦</td><td>do</td>
+				</tr>
+				<tr>
+					<td>
+						<input id="string_0" onfocus="if(this.value==this.defaultValue){this.value='';placeholder=this.defaultValue}"
+						   onblur="if(this.value==''){this.value=this.defaultValue}"/>
+					</td>
+					<td>
+						<input id="string_1" onfocus="if(this.value==this.defaultValue){this.value='';placeholder=this.defaultValue}"
+						   onblur="if(this.value==''){this.value=this.defaultValue}"/>
+					</td>
+					<td>
+						<input id="string_2" onfocus="if(this.value==this.defaultValue){this.value='';placeholder=this.defaultValue}"
+						   onblur="if(this.value==''){this.value=this.defaultValue}"/>
+					</td>
+					<td>
+						<input id="string_3" onfocus="if(this.value==this.defaultValue){this.value='';placeholder=this.defaultValue}"
+						   onblur="if(this.value==''){this.value=this.defaultValue}"/>
+					</td>
+					<td>
+						<input id="string_4" onfocus="if(this.value==this.defaultValue){this.value='';placeholder=this.defaultValue}"
+						   onblur="if(this.value==''){this.value=this.defaultValue}"/>
+					</td>
+					<td>
+						<input id="string_5" onfocus="if(this.value==this.defaultValue){this.value='';placeholder=this.defaultValue}"
+						   onblur="if(this.value==''){this.value=this.defaultValue}"/>
+					</td>
+					<td>
+						<input id="string_6" onfocus="if(this.value==this.defaultValue){this.value='';placeholder=this.defaultValue}"
+						   onblur="if(this.value==''){this.value=this.defaultValue}"/>
+					</td>
+					<td>
+						<input id="string_do" onfocus="if(this.value==this.defaultValue){this.value='';placeholder=this.defaultValue}"
+						   onblur="if(this.value==''){this.value=this.defaultValue}"/>
+					</td>
+
+				</tr>
+			</table>
+		</div>
+		<div class="sub_strings_set" id="sub_strings_set" style="border-width:1px; border-style:solid; border-color:blue;">
+			<input type="button" name="sub_chin_strings"  value="设置strings" onclick="sub_strings('{{title}}')"/>
 		</div>
 		<div class="ref_set" id="ref_set" style="border-width:1px; border-style:solid; border-color:red;">
 			音高
@@ -155,33 +198,11 @@
 					<option value="8820"></option>
 					<option value="4410"></option>
 				</datalist>
-				<input type="button" id="sub_play_clips" style="float:right"
+				<input type="button" id="sub_play_clips" style="float:right;width:20%"
 					   onclick="play_clips('{{title|safe}}',{{nfft|safe}})" value="播放">
 		</div>
 	</div>
 </div>
-<script>
-	//设置定弦信息
-    var string_hzes={{string_hzes|safe}};
-    var divItem=document.getElementById("strings_set");
-    var string_do='{{string_do|safe}}';
-    var strings_set="<table border='' id=strings_set>";
-    strings_set+="<tr>";
-    for (var i=0;i<string_hzes.length;++i){
-    	strings_set+="<td>"+(i+1).toString()+"弦</td>";
-    }
-    strings_set+="<td>do</td>"
-    strings_set+="</tr><tr>";
-    for (var i=0;i<string_hzes.length;++i){
-    	strings_set+="<td><input type=number value="+string_hzes[i].toFixed(2).toString()+" id=string_"+i.toString()+"></input></td>";
-    }
-    strings_set+="<td><input value="+string_do+" id=string_do></input></td>"
-    strings_set+="</tr></table>";
-    //var title="{{title|safe}}";
-    strings_set+='<input type="button" id="sub_chin_strings" value="设置strings"　onclick="sub_strings()"></input>'
-	console.log(strings_set);
-    divItem.innerHTML=strings_set;
-</script>
 <script>
     //关于端点检测的字典数组
     var vadChartDictSeries={"spectral_entropy":{{ee|safe}},"rmse":{{rmse|safe}}};
@@ -282,14 +303,26 @@
     var string_notes={{string_notes|safe}};
     var divItem=document.getElementById("strings_info");
     var string_do='{{string_do|safe}}';
+    var pitch_scaling = {{pitch_scaling|safe}};
     var strings_info_table="<table border='' class='strings_info_table'　id='strings_info_table'><tr>";
     for (var i=0;i<string_notes.length;++i){
     	strings_info_table+="<td>"+string_notes[i]+"</td>";
     }
-    strings_info_table+="<td>"+"do= "+string_do+"</td>";
+    strings_info_table+="<td>do= "+string_do+"</td>";
+    strings_info_table+="<td>scaling="+pitch_scaling.toString()+"</td>";
     strings_info_table+="</tr></table>";
     divItem.innerHTML=strings_info_table;
 </script>
-
+<script>
+	//设置定弦信息
+    var string_hzes={{string_hzes|safe}};
+    var string_do='{{string_do|safe}}';
+    for (var i=0;i<string_hzes.length;++i){
+    	var divItem=document.getElementById("string_"+i.toString());
+    	divItem.defaultValue=string_hzes[i].toFixed(2);
+    }
+	var divItem=document.getElementById("string_do");
+    divItem.defaultValue=string_do;
+</script>
 </body>
 </html>
