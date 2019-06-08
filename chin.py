@@ -43,11 +43,14 @@ class Chin:
         try:
             tone = self.__tones.index(re__do) + 1
         except Exception as e:
-            if len(re__do) == 2:
-                tone = self.__tones.index(re__do[0]) + 1 + 0.5
-            else:
-                sharp = re__do + "#"
-                tone = self.__tones.index(sharp) + 1 - 0.5
+            try:
+                if len(re__do) == 2:
+                    tone = self.__tones.index(re__do[0]) + 1 + 0.5
+                else:
+                    sharp = re__do + "#"
+                    tone = self.__tones.index(sharp) + 1 - 0.5
+            except:
+                tone = 0
         return [tone, grade]
 
     def cal___tones(self):
@@ -218,11 +221,15 @@ class Chin:
         for i in np.arange(number):
             pitch = pitches[i]
             formatStr = formatStr + "%.2f&nbsp&nbsp&nbsp&nbsp" % pitch
-            noteTone = librosa.hz_to_note(pitch / self.get_scaling(), cents=True)  # 用于测量tone的note，不求百分数
-            formatStr = formatStr + noteTone + "&nbsp&nbsp&nbsp&nbsp"
-            tone = self.note2tone(noteTone)  # 计算音高 ，因为程序编写费时间，不提供直接设置tone的方式
-            tonestr = '%.1f_%d' % (tone[0], tone[1])  # tone[0] 是音高， tone[1]是grade
-            formatStr = formatStr + tonestr + "\n"
+            if pitch>20:
+                noteTone = librosa.hz_to_note(pitch / self.get_scaling(), cents=True)  # 用于测量tone的note，不求百分数
+                formatStr = formatStr + noteTone + "&nbsp&nbsp&nbsp&nbsp"
+                tone = self.note2tone(noteTone)  # 计算音高 ，因为程序编写费时间，不提供直接设置tone的方式
+                tonestr = '%.1f_%d' % (tone[0], tone[1])  # tone[0] 是音高， tone[1]是grade
+                formatStr = formatStr + tonestr + "\n"
+            else:
+                formatStr = ""
+
             # 散音检测
             sanyinPred = self.cal_sanyinpred(pitch, thrsanyin)
             if sanyinPred != []:

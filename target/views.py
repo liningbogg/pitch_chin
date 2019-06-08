@@ -648,6 +648,9 @@ class TargetView(View):
 		if wave.chin is not None:
 			# 获得chin class
 			chin = pickle.loads(wave.chin)
+			string_hzes = chin.get_hzes()
+			string_notes = chin.get_notes()
+			string_do = chin.get_do()
 		else:
 			# chin class 不存在
 			chin = None
@@ -660,6 +663,7 @@ class TargetView(View):
 					'combDescanSecondary':list(combDescanRef[1]), 'comb':list(combRef),'target':target,
 					'startPos': list(vadrs['startPos']),'ee_diff':list(vadrs['ee_diff']),"srcFFT":list(srcFFT),
 				    'filter_fft':list(filter_fft), 'current_tar':current_tar,"filter_rad":filter_rad,
+				    'string_hzes': string_hzes, 'string_notes': string_notes, 'string_do': string_do,
 					"medium":list(medium),"current_frame":current_frame,"extend_rad":extend_rad,'play_fs':labelinfo.play_fs,
 					"tone_extend_rad":tone_extend_rad, "frame_num":end, 'vad_thrart_EE':thrartEE,
 					'vad_thrart_RMSE':thrartRmse, 'vad_throp_EE':throp, 'create_user_id':user_id,'possiblePos':possiblePos}

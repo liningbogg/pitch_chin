@@ -169,3 +169,9 @@ function play_clips(title,nfft)
         }
     };
 }
+//设置strings
+function sub_strings()
+{
+    console.log("hello");
+    alert("hello");
+}

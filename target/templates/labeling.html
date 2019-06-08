@@ -30,6 +30,8 @@
 			<div class="sampling_medium" id="sampling_medium" style="border-width:1px; border-style:solid; border-color:green;">
 			</div>
 		</div>
+		<div class="strings_info" id="strings_info" style="border-width:1px; border-style:solid; border-color:blue;">
+		</div>
 		<div class="ref_info" id="ref_info" style="border-width:1px; border-style:solid; border-color:blue;">
 			{{possiblePos|safe}}
 		</div>
@@ -115,12 +117,15 @@
 				</tr>
 			</table>
 		</div>
+		<div class="strings_set" id="strings_set" style="border-width:1px; border-style:solid; border-color:blue;">
+		</div>
 		<div class="ref_set" id="ref_set" style="border-width:1px; border-style:solid; border-color:red;">
 			音高
 			<input type="number" id="primary_pitch" onfocus="if(this.value==this.defaultValue){this.value=''}"
 				   onblur="if(this.value==''){this.value=this.defaultValue}"
 				   value={{current_tar|safe}} placeholder="待预测音位的音高"/>
-			<input type="button" name="sub_primary_pitch" onclick="cal_pitch_pos('{{title}}')" value="音位估算">
+			<input type="button" name="sub_primary_pitch" onclick="cal_pitch_pos('{{title}}')" value="音位估算"
+				   style="float:right;">
 		</div>
 		<div class="filter_set" id="filter_set" style="border-width:1px; border-style:solid; border-color:red;">
 				频率
@@ -129,7 +134,7 @@
 				带宽
 				<input type="number" id="filter_width" onfocus="if(this.value==this.defaultValue){this.value=''}"
 					   onblur="if(this.value==''){this.value=this.defaultValue}" value={{filter_rad|safe}} placeholder="fft过滤宽度设置"/>
-				<input type="button" id="sub_filter_opt"
+				<input type="button" id="sub_filter_opt" style="float:right"
 					   onclick="filter_fft({{srcFFT|safe}},'{{title|safe}}',{{current_frame|safe}},{{nfft|safe}},{{fs|safe}})" value="重新过滤">
 		</div>
 		<div class="play_clips" id="play_clips" style="border-width:1px; border-style:solid; border-color:red;">
@@ -150,11 +155,33 @@
 					<option value="8820"></option>
 					<option value="4410"></option>
 				</datalist>
-				<input type="button" id="sub_play_clips"
+				<input type="button" id="sub_play_clips" style="float:right"
 					   onclick="play_clips('{{title|safe}}',{{nfft|safe}})" value="播放">
 		</div>
 	</div>
 </div>
+<script>
+	//设置定弦信息
+    var string_hzes={{string_hzes|safe}};
+    var divItem=document.getElementById("strings_set");
+    var string_do='{{string_do|safe}}';
+    var strings_set="<table border='' id=strings_set>";
+    strings_set+="<tr>";
+    for (var i=0;i<string_hzes.length;++i){
+    	strings_set+="<td>"+(i+1).toString()+"弦</td>";
+    }
+    strings_set+="<td>do</td>"
+    strings_set+="</tr><tr>";
+    for (var i=0;i<string_hzes.length;++i){
+    	strings_set+="<td><input type=number value="+string_hzes[i].toFixed(2).toString()+" id=string_"+i.toString()+"></input></td>";
+    }
+    strings_set+="<td><input value="+string_do+" id=string_do></input></td>"
+    strings_set+="</tr></table>";
+    //var title="{{title|safe}}";
+    strings_set+='<input type="button" id="sub_chin_strings" value="设置strings"　onclick="sub_strings()"></input>'
+	console.log(strings_set);
+    divItem.innerHTML=strings_set;
+</script>
 <script>
     //关于端点检测的字典数组
     var vadChartDictSeries={"spectral_entropy":{{ee|safe}},"rmse":{{rmse|safe}}};
@@ -248,8 +275,21 @@
 	}
 	table_str=table_str+"</tr>";
 	table_str=table_str+"</table>"
-	console.log(table_str);
 	document.getElementById('tone_info').innerHTML=table_str;
 </script>
+<script>
+	//显示定弦信息
+    var string_notes={{string_notes|safe}};
+    var divItem=document.getElementById("strings_info");
+    var string_do='{{string_do|safe}}';
+    var strings_info_table="<table border='' class='strings_info_table'　id='strings_info_table'><tr>";
+    for (var i=0;i<string_notes.length;++i){
+    	strings_info_table+="<td>"+string_notes[i]+"</td>";
+    }
+    strings_info_table+="<td>"+"do= "+string_do+"</td>";
+    strings_info_table+="</tr></table>";
+    divItem.innerHTML=strings_info_table;
+</script>
+
 </body>
 </html>

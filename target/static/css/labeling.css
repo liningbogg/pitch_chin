@@ -30,9 +30,11 @@ body,div
 {
     position:relative;
     float:left;
-    width:75%;
+    width:70%;
     top:1%;
     height:96%;
+    overflow-y:auto;
+    overflow-x:auto;
 }
 /*端点检测信息*/
 .vad
@@ -94,8 +96,63 @@ body,div
     top:1%;
     height:98%;
 }
+/*定弦设置*/
+.strings_set
+{
+    position:relative;
+    float:left;
+    display:table;
+	left:0%;
+    width:100%;
+    top:0%;
+    height:4%;
+    font-size:16px;
+    overflow-y:auto;
+    overflow-x:auto;
+}
+.strings_set input
+{
+    font-size:14px;
+	line-height:1;
+	width:100%;
+}
+.strings_set tr td
+{
+    font-size:14px;
+	line-height:1;
+}
+.strings_set tr td input
+{
+    width:98%;
+	table-layout:fixed;
+	font-size:14px;
+	line-height:1;
+}
+/*定弦信息*/
+.strings_info
+{
+    position:relative;
+    float:left;
+    display:table;
+	left:1%;
+    width:98%;
+    top:2.5%;
+    height:4%;
+    font-size:16px;
+    overflow-y:auto;
+    overflow-x:auto;
+}
+
+.strings_info_table tr td
+{
+    font-size:16px;
+	line-height:1;
+	width:12%;
+}
+
 /*标记参考，包括历史信息和当前帧指法推测*/
-.ref_info{
+.ref_info
+{
     position:relative;
     float:left;
     display:table;
@@ -122,33 +179,19 @@ body,div
     overflow-y:auto;
     overflow-x:auto;
 }
-.table_tone
-{
-    width:98%;
-	table-layout:fixed;
-}
+
 .tone_info tr td{
 	font-size:16px;
 	width:10%;
 	line-height:1;
 }
 
-.ref_set{
-    position:relative;
-    float:left;
-	left:0.5%;
-    width:25%;
-    top:1%;
-    height:98%;
-    overflow-y:auto;
-    overflow-x:auto;
-}
 /*参数设置及其他操作*/
 .opt{
     position:relative;
     float:left;
 	left:0.5%;
-    width:24%;
+    width:29%;
     top:1%;
     height:96%;
 }
@@ -164,10 +207,22 @@ body,div
     height:40%;
 	overflow-y:auto;
 }
+.table_info
+{
+    position:relative;
+	float:left;
+	display:table;
+	left:0%;
+    width:100%;
+    top:0%;
+    height:100%;
+	overflow-y:auto;
+}
 /*info 中table样式*/
 .table_info tr td{
 	font-size:16px;
 	line-height:1;
+	width:50%;
 }
 .table_info tr td input{
 	width:98%;
@@ -175,19 +230,24 @@ body,div
 	font-size:16px;
 	line-height:1;
 }
-
-
 /*参考音高参数设置*/
 .ref_set
 {
     position:relative;
 	float:left;
+	display:table-row;
 	left:0%;
     width:100%;
     top:0%;
     height:5%;
-    display:table-row;
 	overflow-y:auto;
+}
+.ref_set input
+{
+    width:20%;
+	table-layout:fixed;
+	font-size:14px;
+	line-height:1;
 }
 /*fft过滤参数设置*/
 .filter_set
