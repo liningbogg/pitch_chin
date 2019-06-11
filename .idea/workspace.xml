@@ -10,17 +10,19 @@
     <bookmark url="file://$PROJECT_DIR$/target/targetTools.py" line="15" />
     <bookmark url="file://$PROJECT_DIR$/baseFrqComb.py" line="274" />
     <bookmark url="file://$PROJECT_DIR$/target/static/css/labeling.css" line="82" />
-    <bookmark url="file://$PROJECT_DIR$/target/static/css/labeling.css" line="253" />
-    <bookmark url="file://$PROJECT_DIR$/target/static/css/labeling.css" line="243" />
+    <bookmark url="file://$PROJECT_DIR$/target/static/css/labeling.css" line="289" />
+    <bookmark url="file://$PROJECT_DIR$/target/static/css/labeling.css" line="279" />
     <bookmark url="file://$PROJECT_DIR$/target/views.py" line="578" />
-    <bookmark url="file://$PROJECT_DIR$/target/static/css/labeling.css" line="164" />
+    <bookmark url="file://$PROJECT_DIR$/target/static/css/labeling.css" line="173" />
+    <bookmark url="file://$PROJECT_DIR$/target/static/css/labeling.css" line="143" />
+    <bookmark url="file://$PROJECT_DIR$/target/static/css/labeling.css" line="224" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8acc8f02-be45-420d-812a-1c53fb213d8d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/static/css/labeling.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/static/css/labeling.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/static/js/labeling.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/static/js/labeling.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/templates/labeling.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/templates/labeling.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/templates/wave.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/templates/wave.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/target/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,29 +39,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/target/static/css/labeling.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="140" column="1" lean-forward="true" selection-start-line="140" selection-start-column="1" selection-end-line="140" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pitch/wsgi.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-              <folding>
-                <element signature="e#221#230#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="235">
-              <caret line="367" column="19" selection-start-line="367" selection-start-column="8" selection-end-line="367" selection-end-column="19" />
+            <state relative-caret-position="9477">
+              <caret line="351" column="15" selection-start-line="351" selection-start-column="15" selection-end-line="351" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -67,35 +48,42 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../miniconda3/envs/django-learning/lib/python3.7/site-packages/librosa/core/time_frequency.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
+            <state relative-caret-position="15444">
               <caret line="577" column="45" selection-start-line="577" selection-start-column="37" selection-end-line="577" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/target/templates/labeling.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="559">
-              <caret line="200" column="85" selection-start-line="200" selection-start-column="85" selection-end-line="200" selection-end-column="85" />
+            <state relative-caret-position="425">
+              <caret line="358" column="26" selection-start-line="358" selection-start-column="26" selection-end-line="358" selection-end-column="26" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#4;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#5;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#6;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#7;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#0;n#tr#2;n#table#0;n#div#0;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#td#1;n#tr#2;n#table#0;n#div#0;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#div#2;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#2;n#div#3;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#3;n#div#5;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#6;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/target/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="30" column="8" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -103,8 +91,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/target/static/js/labeling.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="611">
-              <caret line="177" column="46" lean-forward="true" selection-start-line="177" selection-start-column="46" selection-end-line="177" selection-end-column="46" />
+            <state relative-caret-position="-23">
+              <caret line="153" column="58" selection-start-line="153" selection-start-column="58" selection-end-line="153" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -112,17 +100,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/target/static/css/wave.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-698">
+            <state relative-caret-position="999">
               <caret line="37" column="8" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/target/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="666" column="131" selection-start-line="666" selection-start-column="131" selection-end-line="666" selection-end-column="131" />
+            <state relative-caret-position="721">
+              <caret line="684" column="68" lean-forward="true" selection-start-line="684" selection-start-column="68" selection-end-line="684" selection-end-column="68" />
               <folding>
                 <element signature="e#17#28#0" expanded="true" />
               </folding>
@@ -133,8 +121,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/target/static/js/wave.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1890">
-              <caret line="133" column="26" lean-forward="true" selection-start-line="133" selection-start-column="26" selection-end-line="133" selection-end-column="26" />
+            <state relative-caret-position="6129">
+              <caret line="227" column="59" lean-forward="true" selection-start-line="227" selection-start-column="59" selection-end-line="227" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -142,12 +130,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/target/templates/wave.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="93" column="50" lean-forward="true" selection-start-line="93" selection-start-column="16" selection-end-line="93" selection-end-column="50" />
+            <state relative-caret-position="4266">
+              <caret line="158" selection-start-line="158" selection-end-line="158" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/target/templates/copywaves.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1755">
+              <caret line="65" column="27" selection-start-line="65" selection-end-line="65" selection-end-column="27" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -165,23 +166,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pauseAll</find>
-      <find>get_phrase</find>
-      <find>&quot;wave</find>
-      <find>MemItem_rmse</find>
-      <find>achieve</find>
-      <find>max</find>
-      <find>f</find>
-      <find>cal_sanyinpred</find>
-      <find>play_clips</find>
-      <find>serializers</find>
-      <find>__tones</find>
-      <find>tone</find>
-      <find>cal___tones</find>
-      <find>note2tone</find>
-      <find>series</find>
-      <find>wave</find>
-      <find>c</find>
       <find>table</find>
       <find>strings</find>
       <find>button</find>
@@ -194,7 +178,24 @@
       <find>__scaling</find>
       <find>table_i</find>
       <find>place</find>
+      <find>tonglo</find>
+      <find>tongs_</find>
       <find>sub_strings_set</find>
+      <find>f</find>
+      <find>strings_info</find>
+      <find>fin</find>
+      <find>tones</find>
+      <find>finger</find>
+      <find>tones_local</find>
+      <find>delete</find>
+      <find>fi</find>
+      <find>onclu</find>
+      <find>opt</find>
+      <find>string</find>
+      <find>ref</find>
+      <find>info</find>
+      <find>ref_info</find>
+      <find>id</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -250,20 +251,18 @@
         <option value="$PROJECT_DIR$/target/models.py" />
         <option value="$PROJECT_DIR$/pitchTarget.py" />
         <option value="$PROJECT_DIR$/target/static/css/wave.css" />
-        <option value="$PROJECT_DIR$/target/templates/wave.html" />
         <option value="$PROJECT_DIR$/chin.py" />
         <option value="$PROJECT_DIR$/target/static/js/labeling.js" />
-        <option value="$PROJECT_DIR$/target/views.py" />
+        <option value="$PROJECT_DIR$/target/templates/wave.html" />
         <option value="$PROJECT_DIR$/target/static/css/labeling.css" />
         <option value="$PROJECT_DIR$/target/templates/labeling.html" />
+        <option value="$PROJECT_DIR$/target/views.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-424" />
-    <option name="y" value="33" />
-    <option name="width" value="1598" />
-    <option name="height" value="1013" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="width" value="960" />
+    <option name="height" value="506" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -351,6 +350,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/target" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/target/static/745683uiyrtegfdhjkmn mnbvxcjhgfduiytre7865437865uyjh21`" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -555,9 +557,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1014" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.62608695" visible="true" weight="0.15181866" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.62608695" visible="true" weight="0.09014233" />
       <window_info id="Structure" order="1" sideWeight="0.37391305" side_tool="true" weight="0.15181866" />
       <window_info id="Favorites" order="2" sideWeight="0.37173578" side_tool="true" weight="0.1213778" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -579,7 +580,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24930748" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.62608695" visible="true" weight="0.15181866" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.62608695" visible="true" weight="0.15181866" />
       <window_info id="Structure" order="1" sideWeight="0.37391305" side_tool="true" weight="0.15181866" />
       <window_info id="Favorites" order="2" sideWeight="0.37173578" side_tool="true" weight="0.1213778" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -883,26 +884,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="48" column="65" selection-start-line="48" selection-start-column="65" selection-end-line="48" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/target/static/js/copywaves.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/templates/copywaves.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="65" column="27" selection-start-line="65" selection-end-line="65" selection-end-column="27" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pitchTarget.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -924,17 +907,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/chin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="353" column="8" selection-start-line="353" selection-start-column="8" selection-end-line="353" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/static/css/labeling.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9477">
+          <caret line="351" column="15" selection-start-line="351" selection-start-column="15" selection-end-line="351" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../miniconda3/envs/django-learning/lib/python3.7/site-packages/librosa/core/time_frequency.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15444">
+          <caret line="577" column="45" selection-start-line="577" selection-start-column="37" selection-end-line="577" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/static/css/wave.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="999">
+          <caret line="37" column="8" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/target/static/js/wave.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
-          <caret line="133" column="26" lean-forward="true" selection-start-line="133" selection-start-column="26" selection-end-line="133" selection-end-column="26" />
+        <state relative-caret-position="6129">
+          <caret line="227" column="59" lean-forward="true" selection-start-line="227" selection-start-column="59" selection-end-line="227" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/templates/wave.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="93" column="50" lean-forward="true" selection-start-line="93" selection-start-column="16" selection-end-line="93" selection-end-column="50" />
+        <state relative-caret-position="4266">
+          <caret line="158" selection-start-line="158" selection-end-line="158" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -943,72 +954,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/target/static/css/wave.css">
+    <entry file="file://$PROJECT_DIR$/target/templates/copywaves.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-698">
-          <caret line="37" column="8" selection-start-line="37" selection-start-column="1" selection-end-line="37" selection-end-column="8" />
+        <state relative-caret-position="1755">
+          <caret line="65" column="27" selection-start-line="65" selection-end-line="65" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/static/js/labeling.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="177" column="46" lean-forward="true" selection-start-line="177" selection-start-column="46" selection-end-line="177" selection-end-column="46" />
+        <state relative-caret-position="-23">
+          <caret line="153" column="58" selection-start-line="153" selection-start-column="58" selection-end-line="153" selection-end-column="58" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chin.py">
+    <entry file="file://$PROJECT_DIR$/target/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="367" column="19" selection-start-line="367" selection-start-column="8" selection-end-line="367" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="666" column="131" selection-start-line="666" selection-start-column="131" selection-end-line="666" selection-end-column="131" />
-          <folding>
-            <element signature="e#17#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../miniconda3/envs/django-learning/lib/python3.7/site-packages/librosa/core/time_frequency.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="577" column="45" selection-start-line="577" selection-start-column="37" selection-end-line="577" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/static/css/labeling.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="140" column="1" lean-forward="true" selection-start-line="140" selection-start-column="1" selection-end-line="140" selection-end-column="1" />
+        <state relative-caret-position="570">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/target/templates/labeling.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="559">
-          <caret line="200" column="85" selection-start-line="200" selection-start-column="85" selection-end-line="200" selection-end-column="85" />
+        <state relative-caret-position="425">
+          <caret line="358" column="26" selection-start-line="358" selection-start-column="26" selection-end-line="358" selection-end-column="26" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#5;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#7;n#div#0;n#div#1;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#tr#2;n#table#0;n#div#0;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#td#1;n#tr#2;n#table#0;n#div#0;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#1;n#div#2;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#2;n#div#3;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#3;n#div#5;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#1;n#div#1;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="721">
+          <caret line="684" column="68" lean-forward="true" selection-start-line="684" selection-start-column="68" selection-end-line="684" selection-end-column="68" />
+          <folding>
+            <element signature="e#17#28#0" expanded="true" />
           </folding>
         </state>
       </provider>

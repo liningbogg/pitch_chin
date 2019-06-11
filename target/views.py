@@ -652,6 +652,8 @@ class TargetView(View):
 			string_notes = chin.get_notes()
 			string_do = chin.get_do()
 			pitch_scaling = chin.get_scaling()
+			a4_hz = chin.get_ahz()
+			print(a4_hz)
 		else:
 			# chin class 不存在
 			chin = None
@@ -659,15 +661,20 @@ class TargetView(View):
 			possiblePos = chin.cal_possiblepos(current_tar)[1].replace("\n", "<br>")
 		else:
 			possiblePos = "尚未设置chin信息"
+		clipsLocalOri=Clip.objects.filter(title=title, create_user_id=user_id,
+							startingPos__range=(current_frame-extend_rad, current_frame+extend_rad))
+		clipsLocal=[]
+		for clip in clipsLocalOri:
+			clipsLocal.append({"id": clip.id, "startingPos":clip.startingPos, "length": clip.length, "tar": list(pickle.loads(clip.tar))})
 		context = {'title': title,'fs':fs,'nfft': nfft, 'ee': ee, 'rmse': rmse, 'stopPos': list(vadrs['stopPos']),
 					'manual_pos':manual_pos,'combDescanPrimary':list(combDescanRef[0]), 'tones_local':tones_local,
 					'combDescanSecondary':list(combDescanRef[1]), 'comb':list(combRef),'target':target,
 					'startPos': list(vadrs['startPos']),'ee_diff':list(vadrs['ee_diff']),"srcFFT":list(srcFFT),
-				    'filter_fft':list(filter_fft), 'current_tar':current_tar,"filter_rad":filter_rad,
+				    'filter_fft':list(filter_fft), 'current_tar':current_tar,"filter_rad":filter_rad,'a4_hz':a4_hz,
 				    'string_hzes': string_hzes, 'string_notes': string_notes, 'string_do': string_do,'pitch_scaling':pitch_scaling,
 					"medium":list(medium),"current_frame":current_frame,"extend_rad":extend_rad,'play_fs':labelinfo.play_fs,
-					"tone_extend_rad":tone_extend_rad, "frame_num":end, 'vad_thrart_EE':thrartEE,
-					'vad_thrart_RMSE':thrartRmse, 'vad_throp_EE':throp, 'create_user_id':user_id,'possiblePos':possiblePos}
+					"tone_extend_rad":tone_extend_rad, "frame_num":end, 'vad_thrart_EE':thrartEE,"clipsLocal": clipsLocal,
+					'vad_thrart_RMSE':thrartRmse, 'vad_throp_EE':throp, 'create_user_id':user_id,'possiblePos': possiblePos}
 		return render(request, 'labeling.html', context)
 
 	@method_decorator(login_required)

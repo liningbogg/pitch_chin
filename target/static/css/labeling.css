@@ -103,7 +103,7 @@ body,div
     float:left;
     display:table;
 	left:0%;
-    width:100%;
+    width:99%;
     top:0%;
     height:4%;
     font-size:16px;
@@ -132,7 +132,7 @@ body,div
     float:left;
     display:table;
 	left:0%;
-    width:100%;
+    width:99%;
     top:0%;
     height:4%;
     font-size:16px;
@@ -141,14 +141,24 @@ body,div
 }
 .sub_strings_set input
 {
-    float:right;
-    font-size:14px;
+    font-size:16px;
 	line-height:1;
-	width:20%;
+	width:100%;
 }
 
 /*定弦信息*/
 .strings_info
+{
+    position:relative;
+    float:left;
+    display:table-row;
+	left:1%;
+    width:98%;
+    top:2.5%;
+    height:4%;
+    font-size:16px;
+}
+.strings_info strings_info_table
 {
     position:relative;
     float:left;
@@ -161,7 +171,6 @@ body,div
     overflow-y:auto;
     overflow-x:auto;
 }
-
 .strings_info_table tr td
 {
     font-size:16px;
@@ -183,6 +192,9 @@ body,div
     overflow-y:auto;
     overflow-x:auto;
 }
+.ref_info table{
+    width:98%;
+}
 
 /*音阶信息*/
 .tone_info
@@ -198,13 +210,36 @@ body,div
     overflow-y:auto;
     overflow-x:auto;
 }
-
+.tone_info table{
+    width:100%;
+}
 .tone_info tr td{
 	font-size:16px;
-	width:10%;
+	width:9%;
 	line-height:1;
 }
+/*指法*/
+.fingering
+{
+    position:relative;
+    float:top;
+	left:1%;
+    width:98%;
+    height:9%;
+    top:5%;
+    font-size:14px;
+    overflow-y:auto;
 
+}
+.fingering table{
+    width:100%;
+}
+.fingering tr td{
+    width:12.5%;
+}
+.fingering tr td input{
+    width:100%;
+}
 /*参数设置及其他操作*/
 .opt{
     position:relative;
@@ -213,6 +248,7 @@ body,div
     width:29%;
     top:1%;
     height:96%;
+    overflow-y:auto;
 }
 /*参数信息*/
 .info
@@ -221,7 +257,7 @@ body,div
 	float:left;
 	display:table;
 	left:0%;
-    width:100%;
+    width:99%;
     top:0%;
     height:40%;
 	overflow-y:auto;
@@ -256,14 +292,14 @@ body,div
 	float:left;
 	display:table-row;
 	left:0%;
-    width:100%;
+    width:99%;
     top:0%;
     height:5%;
 	overflow-y:auto;
 }
 .ref_set input
 {
-    width:20%;
+    width:22%;
 	table-layout:fixed;
 	font-size:14px;
 	line-height:1;
@@ -274,7 +310,7 @@ body,div
     position:relative;
 	float:left;
 	left:0%;
-    width:100%;
+    width:99%;
     top:0%;
     height:5%;
     display:table-row;
@@ -282,7 +318,7 @@ body,div
 }
 .filter_set input
 {
-    width:20%;
+    width:22%;
 	table-layout:fixed;
 	font-size:14px;
 	line-height:1;
@@ -293,7 +329,7 @@ body,div
     position:relative;
 	float:left;
 	left:0%;
-    width:100%;
+    width:99%;
     top:0%;
     height:5%;
     display:table-row;
@@ -306,6 +342,18 @@ body,div
 	font-size:14px;
 	line-height:1;
 }
+/*clips显示和设置*/
+.clips{
+    position:relative;
+	float:left;
+	left:0%;
+    width:99%;
+    top:0%;
+    height:12%;
+    display:table-row;
+	overflow-y:auto;
+}
+
 /*去除num小箭头*/
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button{

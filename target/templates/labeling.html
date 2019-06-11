@@ -30,13 +30,14 @@
 			<div class="sampling_medium" id="sampling_medium" style="border-width:1px; border-style:solid; border-color:green;">
 			</div>
 		</div>
-		<div class="strings_info" id="strings_info" style="border-width:1px; border-style:solid; border-color:blue;">
+		<div class="strings_info" id="strings_info" style="border-width:1px; border-style:solid; border-color:red;">
 		</div>
 		<div class="ref_info" id="ref_info" style="border-width:1px; border-style:solid; border-color:blue;">
 			{{possiblePos|safe}}
 		</div>
 		<div class="tone_info" id="tone_info" style="border-width:1px; border-style:solid; border-color:red;">
-
+		</div>
+		<div class="fingering" id="fingering" style="border-width:1px; border-style:solid; border-color:green;">
 		</div>
 	</div>
 
@@ -160,7 +161,7 @@
 			</table>
 		</div>
 		<div class="sub_strings_set" id="sub_strings_set" style="border-width:1px; border-style:solid; border-color:blue;">
-			<input type="button" name="sub_chin_strings"  value="设置strings" onclick="sub_strings('{{title}}')"/>
+			<input type="button" name="sub_chin_strings"  value="设置strings" onclick="sub_strings('{{title}}')" style="float:right;"/>
 		</div>
 		<div class="ref_set" id="ref_set" style="border-width:1px; border-style:solid; border-color:red;">
 			音高
@@ -198,8 +199,11 @@
 					<option value="8820"></option>
 					<option value="4410"></option>
 				</datalist>
-				<input type="button" id="sub_play_clips" style="float:right;width:20%"
+				<input type="button" id="sub_play_clips" style="float:right;width:22%"
 					   onclick="play_clips('{{title|safe}}',{{nfft|safe}})" value="播放">
+		</div>
+		<div class="clips" id="clips" style="border-width:1px; border-style:solid; border-color:blue;">
+
 		</div>
 	</div>
 </div>
@@ -281,22 +285,48 @@
 </script>
 <script>
 	//显示tones
-	var tones_local={{tones_local|safe}};
+	var tones_local_var={{tones_local|safe}};
 	var table_str="<table border='' class='table_tones' id='table_tones' >";
 	table_str=table_str+"<tr><td>pos</td>";
-	for (tone in tones_local)
+	for (tone in tones_local_var)
 	{
-		table_str=table_str+'<td>'+tones_local[tone].fields.pos+'</td>';
+		table_str=table_str+'<td>'+tones_local_var[tone].fields.pos+'</td>';
+	}
+	table_str=table_str+"</tr>";
+	table_str=table_str+"<tr><td>len</td>";
+	for (tone in tones_local_var)
+	{
+		table_str=table_str+'<td>'+tones_local_var[tone].fields.length+'</td>';
 	}
 	table_str=table_str+"</tr>";
 	table_str=table_str+"<tr><td>tone</td>";
-	for (tone in tones_local)
+	for (tone in tones_local_var)
 	{
-		table_str=table_str+'<td>'+tones_local[tone].fields.tone+'</td>';
+		table_str=table_str+'<td>'+tones_local_var[tone].fields.tone+'</td>';
 	}
 	table_str=table_str+"</tr>";
 	table_str=table_str+"</table>"
 	document.getElementById('tone_info').innerHTML=table_str;
+</script>
+<script>
+	//显示tones(全部信息，且可编辑)
+	var tones_local_var={{tones_local|safe}};
+	var table_str="<table border='' class='table_fingering' id='table_fingering' >";
+	for (tone in tones_local_var)
+	{
+		table_str=table_str+'<tr>';
+		table_str=table_str+'<td>'+tones_local_var[tone].fields.pos+'</td>';
+		table_str=table_str+'<td>'+tones_local_var[tone].fields.length+'</td>';
+		table_str=table_str+'<td>'+tones_local_var[tone].fields.pitch+'</td>';
+		table_str=table_str+'<td>'+tones_local_var[tone].fields.note+'</td>';
+		table_str=table_str+'<td>'+tones_local_var[tone].fields.tone+'</td>';
+		table_str=table_str+'<td>'+tones_local_var[tone].fields.anote+'</td>';
+		table_str=table_str+'<td><input type="button" value="删除" onclick="deleteTone(tones_local_var[tone])"/></td>';
+		table_str=table_str+'<td><input type="button" value="重置"/></td>';
+		table_str=table_str+'</tr>';
+	}
+	table_str=table_str+"</table>"
+	document.getElementById('fingering').innerHTML=table_str;
 </script>
 <script>
 	//显示定弦信息
@@ -323,6 +353,18 @@
     }
 	var divItem=document.getElementById("string_do");
     divItem.defaultValue=string_do;
+</script>
+<script>
+	var clipsLocal={{clipsLocal|safe}};
+	console.log(clipsLocal);
+</script>
+<script>
+    // 总是滚动到最低端
+    function top_set(divName){
+        var clipDiv = document.getElementById(divName);
+        clipDiv.scrollTop = clipDiv.scrollHeight;
+    }
+    top_set("fingering");
 </script>
 </body>
 </html>
