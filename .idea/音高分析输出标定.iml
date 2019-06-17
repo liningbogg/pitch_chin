@@ -4,7 +4,11 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
+<<<<<<< HEAD
     <orderEntry type="jdk" jdkName="Python 3.7" jdkType="Python SDK" />
+=======
+    <orderEntry type="jdk" jdkName="Python 3.7 (django-learning)" jdkType="Python SDK" />
+>>>>>>> 1a4833c51f62c9ab607f6c94e2d8aee60f42bb0e
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TestRunnerService">

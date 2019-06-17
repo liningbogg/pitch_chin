@@ -134,7 +134,11 @@ body,div
 	left:0%;
     width:99%;
     top:0%;
+<<<<<<< HEAD
     height:2%;
+=======
+    height:4%;
+>>>>>>> 1a4833c51f62c9ab607f6c94e2d8aee60f42bb0e
     font-size:16px;
     overflow-y:auto;
     overflow-x:auto;
@@ -290,11 +294,19 @@ body,div
 {
     position:relative;
 	float:left;
+<<<<<<< HEAD
 	display:table;
 	left:0%;
     width:99%;
     top:0%;
     height:2%;
+=======
+	display:table-row;
+	left:0%;
+    width:99%;
+    top:0%;
+    height:5%;
+>>>>>>> 1a4833c51f62c9ab607f6c94e2d8aee60f42bb0e
 	overflow-y:auto;
 }
 .ref_set input
@@ -312,8 +324,13 @@ body,div
 	left:0%;
     width:99%;
     top:0%;
+<<<<<<< HEAD
     height:2%;
     display:table;
+=======
+    height:5%;
+    display:table-row;
+>>>>>>> 1a4833c51f62c9ab607f6c94e2d8aee60f42bb0e
 	overflow-y:auto;
 }
 .filter_set input
@@ -331,8 +348,13 @@ body,div
 	left:0%;
     width:99%;
     top:0%;
+<<<<<<< HEAD
     height:2%;
     display:table;
+=======
+    height:5%;
+    display:table-row;
+>>>>>>> 1a4833c51f62c9ab607f6c94e2d8aee60f42bb0e
 	overflow-y:auto;
 }
 .play_clips input
@@ -342,6 +364,7 @@ body,div
 	font-size:14px;
 	line-height:1;
 }
+<<<<<<< HEAD
 .mark_clips{
     position:relative;
 	float:left;
@@ -352,6 +375,8 @@ body,div
     display:table-row;
 	overflow-y:auto;
 }
+=======
+>>>>>>> 1a4833c51f62c9ab607f6c94e2d8aee60f42bb0e
 /*clips显示和设置*/
 .clips{
     position:relative;
@@ -359,6 +384,7 @@ body,div
 	left:0%;
     width:99%;
     top:0%;
+<<<<<<< HEAD
     height:22%;
     display:table-row;
 	overflow-y:auto;
@@ -373,6 +399,12 @@ body,div
 {
     width:95%;
 }
+=======
+    height:12%;
+    display:table-row;
+	overflow-y:auto;
+}
+>>>>>>> 1a4833c51f62c9ab607f6c94e2d8aee60f42bb0e
 
 /*去除num小箭头*/
 input::-webkit-outer-spin-button,

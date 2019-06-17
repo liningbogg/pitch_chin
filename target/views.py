@@ -327,7 +327,10 @@ class WaveMemSpectrumEntropy(WaveMem):
 		"""
 		sub_wave = []
 		self.rwLock_container.rlock.acquire()
+<<<<<<< HEAD
 		spectrum_entropy=[]
+=======
+>>>>>>> 1a4833c51f62c9ab607f6c94e2d8aee60f42bb0e
 		try:
 			waveKey = user_id + "_" + title + "_" + "spectrum_entropy"	# 例子 pi_秋风词_stft
 			if waveKey in self.container.keys():
@@ -666,6 +669,7 @@ class TargetView(View):
 							startingPos__range=(current_frame-extend_rad, current_frame+extend_rad))
 		clipsLocal=[]
 		for clip in clipsLocalOri:
+<<<<<<< HEAD
 			clipsLocal.append({"id": clip.id, "startingPos":clip.startingPos,
 									"length": clip.length, "tar": list(pickle.loads(clip.tar))})
 		context = {'title': title,'fs':fs,'nfft': nfft, 'ee': ee, 'rmse': rmse, 'stopPos': list(vadrs['stopPos']),
@@ -674,6 +678,15 @@ class TargetView(View):
 					'startPos': list(vadrs['startPos']),'ee_diff':list(vadrs['ee_diff']),"srcFFT":list(srcFFT),
 					'filter_fft':list(filter_fft), 'current_tar':current_tar,"filter_rad":filter_rad,'a4_hz':a4_hz,
 					'string_hzes': string_hzes, 'string_notes': string_notes, 'string_do': string_do,'pitch_scaling':pitch_scaling,
+=======
+			clipsLocal.append({"id": clip.id, "startingPos":clip.startingPos, "length": clip.length, "tar": list(pickle.loads(clip.tar))})
+		context = {'title': title,'fs':fs,'nfft': nfft, 'ee': ee, 'rmse': rmse, 'stopPos': list(vadrs['stopPos']),
+					'manual_pos':manual_pos,'combDescanPrimary':list(combDescanRef[0]), 'tones_local':tones_local,
+					'combDescanSecondary':list(combDescanRef[1]), 'comb':list(combRef),'target':target,
+					'startPos': list(vadrs['startPos']),'ee_diff':list(vadrs['ee_diff']),"srcFFT":list(srcFFT),
+				    'filter_fft':list(filter_fft), 'current_tar':current_tar,"filter_rad":filter_rad,'a4_hz':a4_hz,
+				    'string_hzes': string_hzes, 'string_notes': string_notes, 'string_do': string_do,'pitch_scaling':pitch_scaling,
+>>>>>>> 1a4833c51f62c9ab607f6c94e2d8aee60f42bb0e
 					"medium":list(medium),"current_frame":current_frame,"extend_rad":extend_rad,'play_fs':labelinfo.play_fs,
 					"tone_extend_rad":tone_extend_rad, "frame_num":end, 'vad_thrart_EE':thrartEE,"clipsLocal": clipsLocal,
 					'vad_thrart_RMSE':thrartRmse, 'vad_throp_EE':throp, 'create_user_id':user_id,'possiblePos': possiblePos}

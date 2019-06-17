@@ -86,7 +86,11 @@ DATABASES = {
         'NAME': 'target',
         'HOST': '127.0.0.1',
         'POST': '3306',
+<<<<<<< HEAD
         'USER': 'liningbo',
+=======
+        'USER': 'root',
+>>>>>>> 1a4833c51f62c9ab607f6c94e2d8aee60f42bb0e
         'PASSWORD': '1a2a3a'
     },
 }

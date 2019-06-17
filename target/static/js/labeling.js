@@ -1,7 +1,13 @@
 //临时用inc数组
+<<<<<<< HEAD
 var indexArr=new Array(100000);
 for(var i=0;i<99999;i++){
     indexArr[i]=i;
+=======
+var index=new Array(100000);
+for(var i=0;i<99999;i++){
+    index[i]=i;
+>>>>>>> 1a4833c51f62c9ab607f6c94e2d8aee60f42bb0e
 }
 //曲线颜色列表
 const color_chart=["red","blue","black","green","yellow","gray"];
@@ -40,7 +46,11 @@ function addChart(title, dictSeries, dictLine, currentPos, MyDiv,start, end){
             enabled:false
 		},
         xAxis: {
+<<<<<<< HEAD
             categories: indexArr.slice(start,end),
+=======
+            categories: index.slice(start,end),
+>>>>>>> 1a4833c51f62c9ab607f6c94e2d8aee60f42bb0e
             tickInterval:10
         },
 		yAxis: {
@@ -175,7 +185,12 @@ function play_clips(title,nfft)
 //设置strings
 function sub_strings(title)
 {
+<<<<<<< HEAD
     var test = document.getElementById("strings_set_table");
     console.log(test);
     console.log(test.rows[1].cells[1].getElementsByTagName("INPUT")[0].value);
+=======
+    var test = document.getElementById("string_1").value;
+    console.log(test);
+>>>>>>> 1a4833c51f62c9ab607f6c94e2d8aee60f42bb0e
 }

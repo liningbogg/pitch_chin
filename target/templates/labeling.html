@@ -119,12 +119,17 @@
 			</table>
 		</div>
 		<div class="strings_set" id="strings_set" style="border-width:1px; border-style:solid; border-color:blue;">
+<<<<<<< HEAD
 			<table border="" class="strings_set_table" id="strings_set_table">
+=======
+			<table border="" class="strings_set_table">
+>>>>>>> 1a4833c51f62c9ab607f6c94e2d8aee60f42bb0e
 				<tr>
 					<td>1弦</td><td>2弦</td><td>3弦</td><td>4弦</td><td>5弦</td><td>6弦</td><td>7弦</td><td>do</td>
 				</tr>
 				<tr>
 					<td>
+<<<<<<< HEAD
 						<input onfocus="if(this.value==this.defaultValue){this.value='';placeholder=this.defaultValue}"
 						   onblur="if(this.value==''){this.value=this.defaultValue}"/>
 					</td>
@@ -154,6 +159,37 @@
 					</td>
 					<td>
 						<input onfocus="if(this.value==this.defaultValue){this.value='';placeholder=this.defaultValue}"
+=======
+						<input id="string_0" onfocus="if(this.value==this.defaultValue){this.value='';placeholder=this.defaultValue}"
+						   onblur="if(this.value==''){this.value=this.defaultValue}"/>
+					</td>
+					<td>
+						<input id="string_1" onfocus="if(this.value==this.defaultValue){this.value='';placeholder=this.defaultValue}"
+						   onblur="if(this.value==''){this.value=this.defaultValue}"/>
+					</td>
+					<td>
+						<input id="string_2" onfocus="if(this.value==this.defaultValue){this.value='';placeholder=this.defaultValue}"
+						   onblur="if(this.value==''){this.value=this.defaultValue}"/>
+					</td>
+					<td>
+						<input id="string_3" onfocus="if(this.value==this.defaultValue){this.value='';placeholder=this.defaultValue}"
+						   onblur="if(this.value==''){this.value=this.defaultValue}"/>
+					</td>
+					<td>
+						<input id="string_4" onfocus="if(this.value==this.defaultValue){this.value='';placeholder=this.defaultValue}"
+						   onblur="if(this.value==''){this.value=this.defaultValue}"/>
+					</td>
+					<td>
+						<input id="string_5" onfocus="if(this.value==this.defaultValue){this.value='';placeholder=this.defaultValue}"
+						   onblur="if(this.value==''){this.value=this.defaultValue}"/>
+					</td>
+					<td>
+						<input id="string_6" onfocus="if(this.value==this.defaultValue){this.value='';placeholder=this.defaultValue}"
+						   onblur="if(this.value==''){this.value=this.defaultValue}"/>
+					</td>
+					<td>
+						<input id="string_do" onfocus="if(this.value==this.defaultValue){this.value='';placeholder=this.defaultValue}"
+>>>>>>> 1a4833c51f62c9ab607f6c94e2d8aee60f42bb0e
 						   onblur="if(this.value==''){this.value=this.defaultValue}"/>
 					</td>
 
@@ -202,9 +238,12 @@
 				<input type="button" id="sub_play_clips" style="float:right;width:22%"
 					   onclick="play_clips('{{title|safe}}',{{nfft|safe}})" value="播放">
 		</div>
+<<<<<<< HEAD
 		<div class="mark_clips" id="mark_clips" style="border-width:1px; border-style:solid; border-color:blue;">
 
 		</div>
+=======
+>>>>>>> 1a4833c51f62c9ab607f6c94e2d8aee60f42bb0e
 		<div class="clips" id="clips" style="border-width:1px; border-style:solid; border-color:blue;">
 
 		</div>
@@ -337,7 +376,11 @@
     var divItem=document.getElementById("strings_info");
     var string_do='{{string_do|safe}}';
     var pitch_scaling = {{pitch_scaling|safe}};
+<<<<<<< HEAD
     var strings_info_table="<table border='1' class='strings_info_table'　id='strings_info_table'><tr>";
+=======
+    var strings_info_table="<table border='' class='strings_info_table'　id='strings_info_table'><tr>";
+>>>>>>> 1a4833c51f62c9ab607f6c94e2d8aee60f42bb0e
     for (var i=0;i<string_notes.length;++i){
     	strings_info_table+="<td>"+string_notes[i]+"</td>";
     }
@@ -350,16 +393,25 @@
 	//设置定弦信息
     var string_hzes={{string_hzes|safe}};
     var string_do='{{string_do|safe}}';
+<<<<<<< HEAD
     var table_row=document.getElementById("strings_set_table").rows[1];
     for (var i=0;i<string_hzes.length;++i){
     	var item=table_row.cells[i].getElementsByTagName("INPUT")[0];
     	item.defaultValue=string_hzes[i].toFixed(2);
     }
 	var divItem=table_row.cells[string_hzes.length].getElementsByTagName("INPUT")[0];
+=======
+    for (var i=0;i<string_hzes.length;++i){
+    	var divItem=document.getElementById("string_"+i.toString());
+    	divItem.defaultValue=string_hzes[i].toFixed(2);
+    }
+	var divItem=document.getElementById("string_do");
+>>>>>>> 1a4833c51f62c9ab607f6c94e2d8aee60f42bb0e
     divItem.defaultValue=string_do;
 </script>
 <script>
 	var clipsLocal={{clipsLocal|safe}};
+<<<<<<< HEAD
 	var clips_str="<table border='' class='table_clips_local' id='table_clips_local' >";
 	for(var i=0;i<clipsLocal.length;i++)
 	{
@@ -387,6 +439,9 @@
 	clips_str+="</table>";
 	var divItem=document.getElementById("clips");
 	divItem.innerHTML=clips_str;
+=======
+	console.log(clipsLocal);
+>>>>>>> 1a4833c51f62c9ab607f6c94e2d8aee60f42bb0e
 </script>
 <script>
     // 总是滚动到最低端
@@ -395,7 +450,10 @@
         clipDiv.scrollTop = clipDiv.scrollHeight;
     }
     top_set("fingering");
+<<<<<<< HEAD
     top_set("clips");
+=======
+>>>>>>> 1a4833c51f62c9ab607f6c94e2d8aee60f42bb0e
 </script>
 </body>
 </html>
